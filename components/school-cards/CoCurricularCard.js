@@ -2,10 +2,7 @@ import Link from "next/link";
 
 export const CoCurricularCard = ({ item }) => {
   return (
-    <div
-      className="courses__item-two shine__animate-item"
-      // style={{ minHeight: "450px" }}
-    >
+    <div className="courses__item-two shine__animate-item">
       <div className="courses__item-two-thumb">
         <Link
           href={`/co-curricular-activities/${item.id}`}
