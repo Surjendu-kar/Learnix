@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import data from "../../util/blog.json";
+import data from "../../data/blog.json";
 import BlogCard1 from "./BlogCard1";
 import BlogCard2 from "./BlogCard2";
 import Pagination from "./Pagination";

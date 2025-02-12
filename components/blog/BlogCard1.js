@@ -3,7 +3,10 @@ import Link from "next/link";
 export default function BlogCard1({ item }) {
   return (
     <>
-      <div className="col-lg-4 col-md-6 col-sm-9" style={{marginBottom: "30px"}}>
+      <div
+        className="col-lg-4 col-md-6 col-sm-9"
+        style={{ marginBottom: "30px" }}
+      >
         <div
           className="blog__post-item shine__animate-item"
           style={{ height: "100%" }}
@@ -26,7 +29,7 @@ export default function BlogCard1({ item }) {
                 <Link href="#">{item.author}</Link>
               </li>
               <li>
-                <i className="flaticon-calendar-date" /> 23 Aug, 2023
+                <i className="flaticon-calendar-date" /> {item.date}
               </li>
             </ul>
           </div>

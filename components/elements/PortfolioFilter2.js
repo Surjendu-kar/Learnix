@@ -1,5 +1,5 @@
 
-import data from "@/util/courses"
+import data from "../../data/courses.json"
 import Isotope from "isotope-layout"
 import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
