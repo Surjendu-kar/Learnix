@@ -64,15 +64,6 @@ export default function Banner1() {
                       />
                     </Link>
                   </div>
-                  <div className="banner__phone">
-                    <i className="flaticon-phone-call" />
-                    <div className="number-info">
-                      <span>Admission Enquiry</span>
-                      <h6 className="number">
-                        <Link href="tel:1800-123-4567">1800-123-4567</Link>
-                      </h6>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

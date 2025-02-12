@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function BlogCard1({ item }) {
   return (
     <>
-      <div className="col-lg-4 col-md-6 col-sm-9">
+      <div className="col-lg-4 col-md-6 col-sm-9" style={{marginBottom: "30px"}}>
         <div
           className="blog__post-item shine__animate-item"
           style={{ height: "100%" }}

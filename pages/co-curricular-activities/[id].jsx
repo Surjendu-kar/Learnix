@@ -3,16 +3,22 @@ import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import courses from "../../data/courses.json";
+import co_curricular_activities from "../../data/co_curricular_activities.json";
 
-const CourseSingle = () => {
+const SingleCurricularActivity = () => {
   const router = useRouter();
   const [course, setCourse] = useState({});
   const id = router.query.id;
 
   useEffect(() => {
     if (!id) <h1>Loading...</h1>;
-    else setCourse(courses.find((item) => item.id == id));
+    else {
+      const activitiesData = Array.isArray(co_curricular_activities)
+        ? co_curricular_activities
+        : co_curricular_activities.coCurricularActivities || [];
+
+      setCourse(activitiesData.find((item) => item.id == id));
+    }
     return () => {};
   }, [id]);
 
@@ -46,43 +52,32 @@ const CourseSingle = () => {
               <div className="col-lg-8">
                 <div className="courses__breadcrumb-content">
                   <Link href="#" className="category">
-                    Graphic Design
+                    {course.category}
                   </Link>
-                  <h3 className="title">{course.courseTitle}</h3>
-                  <p>
-                    Design tutorial will help you learn quickly and thoroughly
-                    orem ipsumor lipsum as it is sometime
-                  </p>
+                  <h3 className="title">{course.activityName}</h3>
+                  <p>{course.description}</p>
                   <ul className="courses__item-meta list-wrap">
                     <li>
-                      <div className="author">
-                        <Link href="#">
-                          <img
-                            src="/assets/img/courses/course_author02.png"
-                            alt="img"
-                          />
-                        </Link>
-                        <Link href="#">Arian Hok</Link>
+                      <div
+                        className="coordinator"
+                        style={{ display: "flex", alignItems: "center" }}
+                      >
+                        <i className="flaticon-user-1" />
+                        <span>Coordinator: {course.coordinator}</span>
                       </div>
                     </li>
                     <li>
-                      <i className="flaticon-file" /> 19
+                      <i className="flaticon-timer" /> {course.duration}
                     </li>
                     <li>
-                      <i className="flaticon-timer" /> 10h 30m
+                      <i className="flaticon-file" /> {course.schedule}
                     </li>
                     <li>
-                      <i className="flaticon-user-1" /> 18
+                      <i className="flaticon-user-1" /> {course.maxParticipants}{" "}
+                      students
                     </li>
                     <li>
-                      <div className="rating">
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <span className="rating-count">(4.8)</span>
-                      </div>
+                      <i className="flaticon-location-pin" /> {course.venue}
                     </li>
                   </ul>
                 </div>
@@ -90,7 +85,6 @@ const CourseSingle = () => {
             </div>
           </div>
         </section>
-
         <section className="courses-details-area section-pb-120">
           <div className="container">
             <div className="row">
@@ -919,4 +913,4 @@ const CourseSingle = () => {
   );
 };
 
-export default CourseSingle;
+export default SingleCurricularActivity;

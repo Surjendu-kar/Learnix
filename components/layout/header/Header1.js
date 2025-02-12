@@ -1,15 +1,20 @@
 import Link from "next/link";
 import MobileMenu from "../MobileMenu";
 
-export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
+export default function Header1({
+  scroll,
+  isMobileMenu,
+  handleMobileMenu,
+  breadcrumbTitle,
+}) {
   return (
     <>
       <header>
         <div
           id="sticky-header"
-          className={`tg-header__area transparent-header ${
-            scroll ? "sticky-menu" : ""
-          }`}
+          className={`tg-header__area ${
+            !breadcrumbTitle ? "transparent-header" : ""
+          } ${scroll ? "sticky-menu" : ""}`}
         >
           <div className="container custom-container">
             <div className="row">
@@ -167,10 +172,21 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                     <div className="tgmenu__action">
                       <ul className="list-wrap">
                         <li className="header-phone d-none d-lg-block d-xl-none d-xxl-block">
-                          <Link href="/tel:993-00-67777">
+                          {/* <Link href="/tel:993-00-67777">
                             <i className="flaticon-phone-call" />
                             993-00-67777
-                          </Link>
+                          </Link> */}
+                          <div className="banner__phone">
+                            <i className="flaticon-phone-call" />
+                            <div className="number-info">
+                              <span>Admission Enquiry</span>
+                              <h6 className="number">
+                                <Link href="tel:1800-123-4567">
+                                  1800-123-4567
+                                </Link>
+                              </h6>
+                            </div>
+                          </div>
                         </li>
                         <li className="header-btn free-btn">
                           <Link href="/contact" className="btn">
@@ -181,6 +197,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                     </div>
                   </nav>
                 </div>
+
                 {/* Mobile Menu  */}
                 <div className="tgmobile__menu">
                   <nav className="tgmobile__menu-box">
@@ -205,11 +222,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                     </div>
                     <div className="tgmenu__action">
                       <ul className="list-wrap">
-                        <li className="header-btn login-btn">
+                        {/* <li className="header-btn login-btn">
                           <Link href="#" className="btn">
                             Log in
                           </Link>
-                        </li>
+                        </li> */}
                         <li className="header-btn">
                           <Link href="#" className="btn">
                             Try For Free
@@ -217,7 +234,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                         </li>
                       </ul>
                     </div>
-                    <div className="social-links">
+                    {/* <div className="social-links">
                       <ul className="list-wrap">
                         <li>
                           <Link href="#">
@@ -245,7 +262,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                           </Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </nav>
                 </div>
                 <div
