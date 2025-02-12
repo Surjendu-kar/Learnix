@@ -5,7 +5,7 @@ const CommunityServiceCard = ({ item }) => {
   return (
     <div className="courses__item-two shine__animate-item">
       <div className="courses__item-two-thumb">
-        <img src={`/assets/img/courses/course_thumb03.jpg`} alt="img" />
+        <img src={`/assets/img/courses/course_thumb05.jpg`} alt="img" />
       </div>
       <div className="courses__item-two-content">
         <div
