@@ -59,13 +59,12 @@ function CoCurricularActivities() {
         return a.maxParticipants - b.maxParticipants;
       case "participants_desc":
         return b.maxParticipants - a.maxParticipants;
-      case "asc":
-        return a.id - b.id;
-      case "des":
-        return b.id - a.id;
+      case "latest":
       case "":
       default:
-        return a.id - b.id;
+        return new Date(b.startDate) - new Date(a.startDate);
+      case "oldest":
+        return new Date(a.startDate) - new Date(b.startDate);
     }
   };
 
@@ -148,9 +147,8 @@ function CoCurricularActivities() {
                             className="orderby"
                             onChange={sortHandler}
                           >
-                            <option value="">Sort by (default)</option>
-                            <option value="asc">Newest</option>
-                            <option value="des">Oldest</option>
+                            <option value="">Sort by (Latest First)</option>
+                            <option value="oldest">Oldest First</option>
                           </select>
                         </div>
                         <div>

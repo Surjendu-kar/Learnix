@@ -3,6 +3,7 @@
     {
       "id": 1,
       "activityName": "Robotics Club",
+      "startDate": "2025-01-15",
       "category": "Technology",
       "coordinator": "Mr. Rajesh Kumar",
       "schedule": "Every Tuesday",
@@ -16,6 +17,7 @@
     {
       "id": 2,
       "activityName": "Drama Club",
+      "startDate": "2025-01-16",
       "category": "Performing Arts",
       "coordinator": "Mrs. Priya Singh",
       "schedule": "Every Wednesday",
@@ -29,6 +31,7 @@
     {
       "id": 3,
       "activityName": "Science Club",
+      "startDate": "2025-01-17",
       "category": "Science",
       "coordinator": "Dr. Amit Sharma",
       "schedule": "Every Thursday",
@@ -42,6 +45,7 @@
     {
       "id": 4,
       "activityName": "Art & Craft Club",
+      "startDate": "2025-01-18",
       "category": "Creative Arts",
       "coordinator": "Ms. Deepika Patel",
       "schedule": "Every Friday",
@@ -55,6 +59,7 @@
     {
       "id": 5,
       "activityName": "Debate Club",
+      "startDate": "2025-01-19",
       "category": "Public Speaking",
       "coordinator": "Mr. Arun Verma",
       "schedule": "Every Monday",
@@ -68,6 +73,7 @@
     {
       "id": 6,
       "activityName": "Music Club",
+      "startDate": "2025-01-20",
       "category": "Performing Arts",
       "coordinator": "Mr. Sanjay Mishra",
       "schedule": "Every Saturday",
@@ -81,6 +87,7 @@
     {
       "id": 7,
       "activityName": "Photography Club",
+      "startDate": "2025-01-21",
       "category": "Creative Arts",
       "coordinator": "Ms. Anjali Kumar",
       "schedule": "Every Wednesday",
@@ -94,6 +101,7 @@
     {
       "id": 8,
       "activityName": "Environmental Club",
+      "startDate": "2025-01-22",
       "category": "Environment",
       "coordinator": "Dr. Sunita Rao",
       "schedule": "Every Tuesday",
@@ -107,6 +115,7 @@
     {
       "id": 9,
       "activityName": "Chess Club",
+      "startDate": "2025-01-23",
       "category": "Mind Sports",
       "coordinator": "Mr. Vivek Shah",
       "schedule": "Every Thursday",
@@ -120,6 +129,7 @@
     {
       "id": 10,
       "activityName": "Coding Club",
+      "startDate": "2025-01-24",
       "category": "Technology",
       "coordinator": "Ms. Neha Kapoor",
       "schedule": "Every Friday",
@@ -133,6 +143,7 @@
     {
       "id": 11,
       "activityName": "Dance Club",
+      "startDate": "2025-01-25",
       "category": "Performing Arts",
       "coordinator": "Ms. Reshma Patel",
       "schedule": "Every Monday",
@@ -146,6 +157,7 @@
     {
       "id": 12,
       "activityName": "Literary Club",
+      "startDate": "2025-01-26",
       "category": "Language Arts",
       "coordinator": "Mrs. Meera Mathur",
       "schedule": "Every Wednesday",
@@ -159,6 +171,7 @@
     {
       "id": 13,
       "activityName": "Sports Club",
+      "startDate": "2025-01-27",
       "category": "Athletics",
       "coordinator": "Mr. Rahul Dravid",
       "schedule": "Every Tuesday",
@@ -172,6 +185,7 @@
     {
       "id": 14,
       "activityName": "Math Olympiad Club",
+      "startDate": "2025-01-28",
       "category": "Mathematics",
       "coordinator": "Dr. Alok Kumar",
       "schedule": "Every Thursday",
@@ -185,6 +199,7 @@
     {
       "id": 15,
       "activityName": "Model United Nations",
+      "startDate": "2025-01-29",
       "category": "Leadership",
       "coordinator": "Mr. Vikram Seth",
       "schedule": "Every Friday",
@@ -198,6 +213,7 @@
     {
       "id": 16,
       "activityName": "Yoga Club",
+      "startDate": "2025-01-30",
       "category": "Wellness",
       "coordinator": "Ms. Shanti Devi",
       "schedule": "Every Monday",
@@ -211,6 +227,7 @@
     {
       "id": 17,
       "activityName": "Film Making Club",
+      "startDate": "2025-01-31",
       "category": "Media Arts",
       "coordinator": "Mr. Karan Johar",
       "schedule": "Every Saturday",
@@ -224,6 +241,7 @@
     {
       "id": 18,
       "activityName": "Community Service Club",
+      "startDate": "2025-02-01",
       "category": "Social Service",
       "coordinator": "Mrs. Rita Singh",
       "schedule": "Every Wednesday",
@@ -237,6 +255,7 @@
     {
       "id": 19,
       "activityName": "Astronomy Club",
+      "startDate": "2025-02-02",
       "category": "Science",
       "coordinator": "Dr. Rakesh Sharma",
       "schedule": "Every Friday",
@@ -250,6 +269,7 @@
     {
       "id": 20,
       "activityName": "Economics Club",
+      "startDate": "2025-02-03",
       "category": "Commerce",
       "coordinator": "Mr. Raghuram Rajan",
       "schedule": "Every Tuesday",
