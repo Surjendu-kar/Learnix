@@ -1660,7 +1660,7 @@ textarea {
     transform: translateY(-50%);
     width: 2px;
     height: 24px;
-    background: #B2BDCD;
+    /* background: #B2BDCD; */
 }
 
 .tgmenu__action>ul .header-phone a {
@@ -2510,7 +2510,7 @@ textarea {
 .banner__images .shape:nth-child(2) {
     max-width: 65px;
     top: 16%;
-    left: 27%;
+    left: 7%;
 }
 
 @media (max-width: 1500px) {
@@ -2593,7 +2593,7 @@ textarea {
     border-radius: 20px;
     padding: 20px 20px;
     text-align: center;
-    left: 40px;
+    left: 0px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -2651,7 +2651,7 @@ textarea {
     top: auto;
     bottom: 108px;
     left: auto;
-    right: -145px;
+    right: -20px;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -3404,7 +3404,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 60px;
-    margin: 29px 60px 0 0;
+    margin: 29px 20px 0 0;
 }
 
 @media (max-width: 767.98px) {
@@ -3515,7 +3515,7 @@ textarea {
 
 .about__info-list-item:nth-child(4n+3) i {
     font-size: 45px;
-    transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
+    /* transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0); */
 }
 
 .about__info-list-item:nth-child(4n+4) .icon {
@@ -5348,6 +5348,7 @@ textarea {
     -ms-border-radius: 10px;
     border-radius: 10px;
     padding: 32px 30px 27px;
+    min-height: 250px;
 }
 
 @media (max-width: 767.98px) {
