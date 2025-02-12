@@ -99,14 +99,6 @@ export default function About1() {
                       <i className="flaticon-graduation-cap" />
                     </div>
                     <p className="content">
-                      95% <br /> Placement Rate
-                    </p>
-                  </li>
-                  <li className="about__info-list-item">
-                    <div className="icon">
-                      <i className="flaticon-file" />
-                    </div>
-                    <p className="content">
                       50+ <br /> Programs
                     </p>
                   </li>
@@ -124,6 +116,14 @@ export default function About1() {
                     </div>
                     <p className="content">
                       25K+ <br /> Alumni Network
+                    </p>
+                  </li>
+                  <li className="about__info-list-item">
+                    <div className="icon">
+                      <i className="flaticon-file" />
+                    </div>
+                    <p className="content">
+                      100+ <br /> Activities
                     </p>
                   </li>
                 </ul>

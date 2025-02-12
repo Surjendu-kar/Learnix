@@ -77,8 +77,8 @@ export default function Categories1() {
                     <div className="categories__item">
                       <Link href="/courses">
                         <i className="flaticon-bars" />
-                        <span className="name">Placements</span>
-                        <span className="courses">Career Support</span>
+                        <span className="name">Sports</span>
+                        <span className="courses">Physical Education</span>
                       </Link>
                     </div>
                   </div>

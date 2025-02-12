@@ -102,9 +102,9 @@ export default function TestimonialSlider1() {
               className="testimonial__content-active testimonial__content-nav"
             >
               <div className="testimonial__content-item">
-                <div className="testimonial__content-icon">
+                {/* <div className="testimonial__content-icon">
                   <img src="/assets/img/icons/quote.png" alt="img" />
-                </div>
+                </div> */}
                 <div style={{ color: "white", marginBottom: "20px" }}>
                   <h4 style={{ color: "white" }}>Vision :</h4>
                   <p>

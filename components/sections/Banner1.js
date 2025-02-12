@@ -55,7 +55,10 @@ export default function Banner1() {
                   data-aos-delay={800}
                 >
                   <div className="tg-button-wrap">
-                    <Link href="/co-curricular-activities" className="btn tg-svg">
+                    <Link
+                      href="/co-curricular-activities"
+                      className="btn tg-svg"
+                    >
                       <span className="text">Explore Programs</span>
                       <span
                         className="svg-icon"
@@ -110,8 +113,8 @@ export default function Banner1() {
                       <i className="flaticon-graduation-cap" />
                     </div>
                     <div className="info">
-                      <span>Placement Rate</span>
-                      <h4 className="count">95%</h4>
+                      <span>Programs Offered</span>
+                      <h4 className="count">50+</h4>
                     </div>
                   </div>
                 </div>
