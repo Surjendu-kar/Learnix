@@ -197,7 +197,7 @@ export default function Header1({
                         </li>
                         <li
                           className={`menu-item-has-children ${
-                            pathname.startsWith("/school") ||
+                            pathname.startsWith("/school-curriculum") ||
                             pathname.startsWith("/list-of-books") ||
                             pathname.startsWith("/holidays-list") ||
                             pathname.startsWith("/cbse-result")
@@ -338,9 +338,7 @@ export default function Header1({
                           <Link href="/gallery">Gallery</Link>
                         </li>
                         <li
-                          className={
-                            isLinkActive("/contact") ? "active" : ""
-                          }
+                          className={isLinkActive("/contact") ? "active" : ""}
                         >
                           <Link href="/contact">Contact Us</Link>
                         </li>

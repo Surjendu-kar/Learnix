@@ -150,7 +150,7 @@ export default function MobileMenu() {
         </li>
         <li
           className={`menu-item-has-children ${
-            pathname.startsWith("/school") ||
+            pathname.startsWith("/school-curriculum") ||
             pathname.startsWith("/list-of-books") ||
             pathname.startsWith("/holidays-list") ||
             pathname.startsWith("/cbse-result")
