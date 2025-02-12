@@ -11,7 +11,8 @@
       "eligibility": "Classes 6-12",
       "achievements": "State Level Champions 2024",
       "maxPlayers": 25,
-      "timing": "4:00 PM - 6:00 PM"
+      "timing": "4:00 PM - 6:00 PM",
+      "date": "2025-01-15"
     },
     {
       "id": 2,
@@ -24,7 +25,8 @@
       "eligibility": "Classes 8-12",
       "achievements": "District Champions 2024",
       "maxPlayers": 20,
-      "timing": "3:30 PM - 5:30 PM"
+      "timing": "3:30 PM - 5:30 PM",
+      "date": "2025-01-16"
     },
     {
       "id": 3,
@@ -37,7 +39,8 @@
       "eligibility": "All Classes",
       "achievements": "Multiple State Medals",
       "maxPlayers": 40,
-      "timing": "6:00 AM - 7:30 AM"
+      "timing": "6:00 AM - 7:30 AM",
+      "date": "2025-01-17"
     },
     {
       "id": 4,
@@ -50,7 +53,8 @@
       "eligibility": "Classes 4-12",
       "achievements": "Regional Champions",
       "maxPlayers": 16,
-      "timing": "2:30 PM - 4:00 PM"
+      "timing": "2:30 PM - 4:00 PM",
+      "date": "2025-01-18"
     },
     {
       "id": 5,
@@ -63,7 +67,8 @@
       "eligibility": "Classes 3-12",
       "achievements": "State Level Medals",
       "maxPlayers": 30,
-      "timing": "7:00 AM - 8:30 AM"
+      "timing": "7:00 AM - 8:30 AM",
+      "date": "2025-01-19"
     },
     {
       "id": 6,
@@ -76,7 +81,8 @@
       "eligibility": "Classes 6-12",
       "achievements": "Inter-school Champions",
       "maxPlayers": 25,
-      "timing": "4:00 PM - 6:00 PM"
+      "timing": "4:00 PM - 6:00 PM",
+      "date": "2025-01-20"
     },
     {
       "id": 7,
@@ -89,7 +95,8 @@
       "eligibility": "Classes 4-12",
       "achievements": "District Level Winners",
       "maxPlayers": 20,
-      "timing": "3:00 PM - 4:30 PM"
+      "timing": "3:00 PM - 4:30 PM",
+      "date": "2025-01-21"
     },
     {
       "id": 8,
@@ -102,7 +109,8 @@
       "eligibility": "Classes 8-12",
       "achievements": "Zonal Champions",
       "maxPlayers": 18,
-      "timing": "4:30 PM - 6:00 PM"
+      "timing": "4:30 PM - 6:00 PM",
+      "date": "2025-01-22"
     },
     {
       "id": 9,
@@ -115,7 +123,8 @@
       "eligibility": "All Classes",
       "achievements": "National Youth Yoga Championship",
       "maxPlayers": 30,
-      "timing": "7:30 AM - 8:30 AM"
+      "timing": "7:30 AM - 8:30 AM",
+      "date": "2025-01-23"
     },
     {
       "id": 10,
@@ -128,7 +137,8 @@
       "eligibility": "All Classes",
       "achievements": "State Chess Champions",
       "maxPlayers": 20,
-      "timing": "2:30 PM - 4:00 PM"
+      "timing": "2:30 PM - 4:00 PM",
+      "date": "2025-01-24"
     }
   ]
 }

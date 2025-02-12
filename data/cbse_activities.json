@@ -6,12 +6,11 @@
       "category": "Academic",
       "coordinator": "Mrs. Meena Sharma",
       "eligibility": "Classes 9-12",
-      "date": "August 15, 2024",
       "venue": "School Auditorium",
-      "registrationDeadline": "July 30, 2024",
       "type": "Competition",
       "level": "National",
-      "maxParticipants": 4
+      "maxParticipants": 4,
+      "date": "2025-01-15"
     },
     {
       "id": 2,
@@ -19,12 +18,11 @@
       "category": "Creative Writing",
       "coordinator": "Mr. Arun Kumar",
       "eligibility": "Classes 6-12",
-      "date": "September 5, 2024",
       "venue": "Classrooms",
-      "registrationDeadline": "August 25, 2024",
       "type": "Competition",
       "level": "National",
-      "maxParticipants": "Individual"
+      "maxParticipants": "Individual",
+      "date": "2025-01-16"
     },
     {
       "id": 3,
@@ -32,12 +30,11 @@
       "category": "Science",
       "coordinator": "Dr. Amit Gupta",
       "eligibility": "Classes 6-12",
-      "date": "October 10, 2024",
       "venue": "School Ground",
-      "registrationDeadline": "September 25, 2024",
       "type": "Exhibition",
       "level": "Regional",
-      "maxParticipants": 2
+      "maxParticipants": 2,
+      "date": "2025-01-17"
     },
     {
       "id": 4,
@@ -45,12 +42,11 @@
       "category": "Sports",
       "coordinator": "Mr. Rajesh Singh",
       "eligibility": "All Classes",
-      "date": "December 5, 2024",
       "venue": "Sports Ground",
-      "registrationDeadline": "November 20, 2024",
       "type": "Movement",
       "level": "National",
-      "maxParticipants": "All Students"
+      "maxParticipants": "All Students",
+      "date": "2025-01-18"
     },
     {
       "id": 5,
@@ -58,12 +54,11 @@
       "category": "Literary",
       "coordinator": "Mrs. Priya Verma",
       "eligibility": "Classes 3-12",
-      "date": "January 15, 2025",
       "venue": "School Library",
-      "registrationDeadline": "December 30, 2024",
       "type": "Competition",
       "level": "School",
-      "maxParticipants": "Individual"
+      "maxParticipants": "Individual",
+      "date": "2025-01-19"
     }
   ]
 }
