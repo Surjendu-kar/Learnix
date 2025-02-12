@@ -339,10 +339,10 @@ export default function Header1({
                         </li>
                         <li
                           className={
-                            isLinkActive("/contact-us") ? "active" : ""
+                            isLinkActive("/contact") ? "active" : ""
                           }
                         >
-                          <Link href="/contact-us">Contact Us</Link>
+                          <Link href="/contact">Contact Us</Link>
                         </li>
                       </ul>
                     </div>

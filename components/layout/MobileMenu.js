@@ -242,8 +242,8 @@ export default function MobileMenu() {
         <li className={isLinkActive("/gallery") ? "active" : ""}>
           <Link href="/gallery">Gallery</Link>
         </li>
-        <li className={isLinkActive("/contact-us") ? "active" : ""}>
-          <Link href="/contact-us">Contact Us</Link>
+        <li className={isLinkActive("/contact") ? "active" : ""}>
+          <Link href="/contact">Contact Us</Link>
         </li>
       </ul>
     </>
