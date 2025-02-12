@@ -70,7 +70,7 @@ const SingleCurricularActivity = () => {
                       <i className="flaticon-timer" /> {course.duration}
                     </li>
                     <li>
-                      <i className="flaticon-file" /> {course.schedule}
+                      <i className="flaticon-file" /> {course.date}
                     </li>
                     <li>
                       <i className="flaticon-user-1" /> {course.maxParticipants}{" "}

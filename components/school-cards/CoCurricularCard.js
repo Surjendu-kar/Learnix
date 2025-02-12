@@ -45,7 +45,7 @@ export const CoCurricularCard = ({ item }) => {
         </ul>
         <div className="courses__item-bottom">
           <div className="course__schedule">
-            <span>{item.schedule}</span>
+            <span>{item.date}</span>
           </div>
           <div className="courses__item-rating">
             <span className="venue">{item.venue}</span>

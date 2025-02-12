@@ -62,9 +62,9 @@ function CoCurricularActivities() {
       case "latest":
       case "":
       default:
-        return new Date(b.startDate) - new Date(a.startDate);
+        return new Date(b.date) - new Date(a.date);
       case "oldest":
-        return new Date(a.startDate) - new Date(b.startDate);
+        return new Date(a.date) - new Date(b.date);
     }
   };
 
