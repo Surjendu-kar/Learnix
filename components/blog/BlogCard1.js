@@ -25,8 +25,7 @@ export default function BlogCard1({ item }) {
             </h4>
             <ul className="list-wrap blog__post-meta">
               <li>
-                <i className="flaticon-account" /> by{" "}
-                <Link href="#">{item.author}</Link>
+                <i className="flaticon-account" /> by {item.author}
               </li>
               <li>
                 <i className="flaticon-calendar-date" /> {item.date}
