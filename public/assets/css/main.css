@@ -4737,7 +4737,7 @@ textarea {
     display: -webkit-flex;
     display: flex;
     align-items: center;
-    gap: 10px;
+    /* gap: 10px; */
     margin-right: 20px;
 }
 
@@ -4750,9 +4750,9 @@ textarea {
 .courses__details-curriculum .course-item .item-name::before {
     content: "";
     display: block;
-    background-image: url(../img/icons/play.svg);
-    width: 26px;
-    height: 26px;
+    /* background-image: url(../img/icons/play.svg); */
+    /* width: 26px; */
+    /* height: 26px; */
 }
 
 .courses__details-curriculum .course-item-meta {

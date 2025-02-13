@@ -368,6 +368,9 @@ export default function Header1({
                         >
                           <Link href="/gallery">Gallery</Link>
                         </li>
+                        <li className={isLinkActive("/notice") ? "active" : ""}>
+                          <Link href="/notice">Notice</Link>
+                        </li>
                         <li
                           className={isLinkActive("/contact") ? "active" : ""}
                         >
