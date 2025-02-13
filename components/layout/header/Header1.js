@@ -17,6 +17,41 @@ export default function Header1({
     return pathname === path;
   };
 
+  const isAboutSectionActive = () => {
+    const aboutPaths = [
+      "/about-us",
+      "/affiliation",
+      "/infrastucture",
+      "/admission",
+      "/principal's-message",
+      "/mandatory-disclosure",
+    ];
+    return aboutPaths.some((path) => pathname === path);
+  };
+
+  const isAdministrationSectionActive = () => {
+    const administrationPaths = [
+      "/staff-details",
+      "/school-comittee",
+      "/student-enrol",
+      "/fee-and-scholarship",
+      "/teachers-training",
+      "/tc-sample",
+    ];
+    return administrationPaths.some((path) => pathname === path);
+  };
+
+  const isAcademicsSectionActive = () => {
+    const academicsPaths = [
+      "/school-curriculum",
+      "/list-of-books",
+      "/school-at-glance",
+      "/holidays-list",
+      "/cbse-result",
+    ];
+    return academicsPaths.some((path) => pathname === path);
+  };
+
   return (
     <>
       <header>
@@ -68,9 +103,11 @@ export default function Header1({
                             </li>
                           </ul>
                         </li>
+
+                        {/* About */}
                         <li
                           className={`menu-item-has-children ${
-                            pathname.startsWith("/about-us") ? "active" : ""
+                            isAboutSectionActive() ? "active" : ""
                           }`}
                         >
                           <Link href="#">About</Link>
@@ -127,16 +164,11 @@ export default function Header1({
                             </li>
                           </ul>
                         </li>
+
+                        {/* Administration */}
                         <li
                           className={`menu-item-has-children ${
-                            pathname.startsWith("/staff") ||
-                            pathname.startsWith("/school-comittee") ||
-                            pathname.startsWith("/student-enrol") ||
-                            pathname.startsWith("/fee") ||
-                            pathname.startsWith("/teachers") ||
-                            pathname.startsWith("/tc")
-                              ? "active"
-                              : ""
+                            isAdministrationSectionActive() ? "active" : ""
                           }`}
                         >
                           <Link href="#">Administration</Link>
@@ -195,14 +227,11 @@ export default function Header1({
                             </li>
                           </ul>
                         </li>
+
+                        {/* Academics */}
                         <li
                           className={`menu-item-has-children ${
-                            pathname.startsWith("/school-curriculum") ||
-                            pathname.startsWith("/list-of-books") ||
-                            pathname.startsWith("/holidays-list") ||
-                            pathname.startsWith("/cbse-result")
-                              ? "active"
-                              : ""
+                            isAcademicsSectionActive() ? "active" : ""
                           }`}
                         >
                           <Link href="#">Academics</Link>
@@ -252,6 +281,8 @@ export default function Header1({
                             </li>
                           </ul>
                         </li>
+
+                        {/* more */}
                         <li
                           className={`menu-item-has-children ${
                             pathname.startsWith("/co-curricular") ||

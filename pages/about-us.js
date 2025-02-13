@@ -14,30 +14,32 @@ export default function AboutUs() {
                     <div className="section__title">
                       <span className="sub-title">Who we are</span>
                       <h2 className="title tg-svg">
-                        The Leading Global{" "}
+                        Empowering Young{" "}
                         <span className="position-relative">
                           <span
                             className="svg-icon"
                             id="about-svg"
                             data-svg-icon="assets/img/icons/title_shape.svg"
                           />
-                          Marketplace
+                          Minds
                         </span>{" "}
-                        for Learning and Instruction
+                        Through Quality Education
                       </h2>
                     </div>
                     <p className="fw-medium">
-                      Borem ipsum dolor sit amet, consectetur adipiscing eliawe
-                      ellus luctus nec ullamcorper mattisBorem
+                      We are committed to providing comprehensive education that
+                      nurtures intellectual growth, character development, and
+                      lifelong learning skills.
                     </p>
                     <p>
-                      Bipsum dolor awtnse awctetur adipis we followelit.
-                      Borem.Borem ipsum dolamet consectetur adipiscing eliawe
-                      awUt elit ellutnse awcon sectetur adipiscing ectetur.
+                      Our school offers a balanced curriculum that combines
+                      academic excellence with co-curricular activities,
+                      fostering all-round development of our students in a
+                      supportive and innovative learning environment.
                     </p>
                     <div className="tg-button-wrap">
-                      <Link href="/courses" className="btn tg-svg">
-                        <span className="text">Explore Courses</span>{" "}
+                      <Link href="/co-curricular-activities" className="btn tg-svg">
+                        <span className="text">Explore Activities</span>{" "}
                         <span
                           className="svg-icon"
                           id="about-btn"

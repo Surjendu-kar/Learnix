@@ -16,6 +16,59 @@ export default function MobileMenu() {
     return pathname === path;
   };
 
+  const isHomeSectionActive = () => {
+    const homePaths = ["/", "/index-2", "/index-3"];
+    return homePaths.some((path) => pathname === path);
+  };
+
+  const isAboutSectionActive = () => {
+    const aboutPaths = [
+      "/about-us",
+      "/affiliation",
+      "/infrastucture",
+      "/admission",
+      "/principal's-message",
+      "/mandatory-disclosure",
+    ];
+    return aboutPaths.some((path) => pathname === path);
+  };
+
+  const isAdministrationSectionActive = () => {
+    const administrationPaths = [
+      "/staff-details",
+      "/school-comittee",
+      "/student-enrol",
+      "/fee-and-scholarship",
+      "/teachers-training",
+      "/tc-sample",
+    ];
+    return administrationPaths.some((path) => pathname === path);
+  };
+
+  const isAcademicsSectionActive = () => {
+    const academicsPaths = [
+      "/school-curriculum",
+      "/list-of-books",
+      "/school-at-glance",
+      "/holidays-list",
+      "/cbse-result",
+    ];
+    return academicsPaths.some((path) => pathname === path);
+  };
+
+  const isMoreSectionActive = () => {
+    const morePaths = [
+      "/co-curricular-activities",
+      "/school-activities",
+      "/achievements",
+      "/olympiad",
+      "/community-services",
+      "/sports",
+      "/cbse-activities",
+    ];
+    return morePaths.some((path) => pathname === path);
+  };
+
   const handleToggle = (key) => {
     if (isActive.key === key) {
       setIsActive({
@@ -34,11 +87,7 @@ export default function MobileMenu() {
       <ul className="navigation">
         <li
           className={`menu-item-has-children ${
-            isLinkActive("/") ||
-            isLinkActive("/index-2") ||
-            isLinkActive("/index-3")
-              ? "active"
-              : ""
+            isHomeSectionActive() ? "active" : ""
           }`}
         >
           <Link href="#">Home</Link>
@@ -63,9 +112,10 @@ export default function MobileMenu() {
             <span className="plus-line" />
           </div>
         </li>
+
         <li
           className={`menu-item-has-children ${
-            pathname.startsWith("/about-us") ? "active" : ""
+            isAboutSectionActive() ? "active" : ""
           }`}
         >
           <Link href="#">About</Link>
@@ -103,16 +153,10 @@ export default function MobileMenu() {
             <span className="plus-line" />
           </div>
         </li>
+
         <li
           className={`menu-item-has-children ${
-            pathname.startsWith("/staff") ||
-            pathname.startsWith("/school-comittee") ||
-            pathname.startsWith("/student-enrol") ||
-            pathname.startsWith("/fee") ||
-            pathname.startsWith("/teachers") ||
-            pathname.startsWith("/tc")
-              ? "active"
-              : ""
+            isAdministrationSectionActive() ? "active" : ""
           }`}
         >
           <Link href="#">Administration</Link>
@@ -148,14 +192,10 @@ export default function MobileMenu() {
             <span className="plus-line" />
           </div>
         </li>
+
         <li
           className={`menu-item-has-children ${
-            pathname.startsWith("/school-curriculum") ||
-            pathname.startsWith("/list-of-books") ||
-            pathname.startsWith("/holidays-list") ||
-            pathname.startsWith("/cbse-result")
-              ? "active"
-              : ""
+            isAcademicsSectionActive() ? "active" : ""
           }`}
         >
           <Link href="#">Academics</Link>
@@ -186,17 +226,10 @@ export default function MobileMenu() {
             <span className="plus-line" />
           </div>
         </li>
+
         <li
           className={`menu-item-has-children ${
-            pathname.startsWith("/co-curricular") ||
-            pathname.startsWith("/school-activities") ||
-            pathname.startsWith("/achievements") ||
-            pathname.startsWith("/olympiad") ||
-            pathname.startsWith("/community-services") ||
-            pathname.startsWith("/sports") ||
-            pathname.startsWith("/cbse-activities")
-              ? "active"
-              : ""
+            isMoreSectionActive() ? "active" : ""
           }`}
         >
           <Link href="#">More</Link>
@@ -239,6 +272,7 @@ export default function MobileMenu() {
             <span className="plus-line" />
           </div>
         </li>
+
         <li className={isLinkActive("/gallery") ? "active" : ""}>
           <Link href="/gallery">Gallery</Link>
         </li>
