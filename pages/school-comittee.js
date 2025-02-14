@@ -22,25 +22,31 @@ function SchoolComitte() {
 
           <div className="row justify-content-center g-4">
             {committeeMembers.map((member) => (
-              <div key={member.id} className="col-xl-3 col-lg-4 col-sm-6 col-12 d-flex justify-content-center">
+              <div
+                key={member.id}
+                className="col-xl-3 col-lg-4 col-sm-6 col-12 d-flex justify-content-center"
+              >
                 <div className="mentors__item w-100">
                   <div className="mentors__img">
-                    <Link href="/instructor-details">
-                      <img 
-                        src={member.image} 
+                    <Link href={`/school-comittee/${member.id}`}>
+                      <img
+                        src={member.image}
                         alt={member.name}
                         style={{
-                          width: '200px',
-                          height: '200px',
-                          objectFit: 'cover'
-                        }} 
+                          width: "200px",
+                          height: "200px",
+                          objectFit: "cover",
+                          background: member.bgColor,
+                        }}
                       />
                     </Link>
                   </div>
                   <div className="mentors__content">
                     <div className="mentors__content-top">
                       <h4 className="name">
-                        <Link href="/instructor-details">{member.name}</Link>
+                        <Link href={`/school-comittee/${member.id}`}>
+                          {member.name}
+                        </Link>
                       </h4>
                       <span className="designation">{member.role}</span>
                     </div>
