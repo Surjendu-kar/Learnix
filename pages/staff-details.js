@@ -1,6 +1,6 @@
 import StaffCard from "@/components/common/StaffCard";
 import Layout from "@/components/layout/Layout";
-import staffData from "@/data/staffData.json";
+import staffData from "@/data/staff_data.json";
 
 
 function Staff() {

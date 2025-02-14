@@ -4128,11 +4128,11 @@ textarea {
 .courses__item-two-content {
   padding: 20px 13px 10px;
   flex: 1;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .courses__item-bottom {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .courses__item-two-content .courses__item-tag {
@@ -6921,7 +6921,8 @@ textarea {
   border-radius: 10px;
   background: var(--tg-common-color-white);
   max-width: 270px;
-  margin: 0 auto 30px;
+  /* margin: 0 auto 30px; */
+  height: 100%;
 }
 
 .mentors__img {
