@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import data from "@/data/staffData.json";
+import data from "@/data/staff_data.json";
 import { useState } from "react";
 
 export default function StaffDetails() {
