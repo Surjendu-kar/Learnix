@@ -63,7 +63,7 @@ const SingleCurricularActivity = () => {
                         style={{ display: "flex", alignItems: "center" }}
                       >
                         <i className="flaticon-user-1" />
-                        <span>Coordinator: {course.coordinator}</span>
+                        <span>{course.coordinator}</span>
                       </div>
                     </li>
                     <li>
@@ -77,7 +77,7 @@ const SingleCurricularActivity = () => {
                       students
                     </li>
                     <li>
-                      <i className="flaticon-location-pin" /> {course.venue}
+                      <i className="flaticon-file" /> {course.venue}
                     </li>
                   </ul>
                 </div>
@@ -88,7 +88,7 @@ const SingleCurricularActivity = () => {
         <section className="courses-details-area section-pb-120">
           <div className="container">
             <div className="row">
-              <div className="col-xl-9 col-lg-8">
+              <div className="col-xl-12 col-lg-8">
                 <div className="courses__details-wrapper">
                   <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item" onClick={() => handleOnClick(1)}>
@@ -753,157 +753,6 @@ const SingleCurricularActivity = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-xl-3 col-lg-4">
-                <aside className="courses__details-sidebar">
-                  <div className="event-widget">
-                    <div className="thumb">
-                      <img
-                        src={`/assets/img/courses/${
-                          course.logo ? course.logo : "course_thumb02.jpg"
-                        }`}
-                        alt="img"
-                      />
-                      <VideoPopup />
-                    </div>
-                    <div className="event-cost-wrap">
-                      <h4 className="price">
-                        <strong>Costs:</strong>$25.00 <span>$84.99</span>
-                      </h4>
-                      <Link href="#" className="btn">
-                        Enroll This Now
-                      </Link>
-                      <div className="event-information-wrap">
-                        <h6 className="title">Include This Course</h6>
-                        <ul className="list-wrap">
-                          <li>
-                            <i className="flaticon-timer" />
-                            Duration <span>5.2 Hours</span>
-                          </li>
-                          <li>
-                            <i className="flaticon-file" />
-                            Estimated Seat <span>250</span>
-                          </li>
-                          <li>
-                            <i className="flaticon-user-1" />
-                            Joined <span>190</span>
-                          </li>
-                          <li>
-                            <i className="flaticon-bars" />
-                            Laguage <span>English</span>
-                          </li>
-                          <li>
-                            <i className="flaticon-flash" />
-                            Category <span>Desing</span>
-                          </li>
-                          <li>
-                            <i className="flaticon-share" />
-                            Share
-                            <ul className="list-wrap event-social">
-                              <li>
-                                <Link href="#">
-                                  <i className="fab fa-facebook-f" />
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="#">
-                                  <i className="fab fa-twitter" />
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="#">
-                                  <i className="fab fa-instagram" />
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="#">
-                                  <i className="fab fa-youtube" />
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="blog-widget">
-                    <h4 className="widget-title">Related Courses</h4>
-                    <div className="rc-post-item">
-                      <div className="rc-post-thumb">
-                        <Link href="/course-details">
-                          <img
-                            src="/assets/img/blog/blog_standard01.jpg"
-                            alt="img"
-                          />
-                        </Link>
-                      </div>
-                      <div className="rc-post-content">
-                        <h4 className="title">
-                          <Link href="/course-details">
-                            Nastering Data ndamentals
-                          </Link>
-                        </h4>
-                        <span className="price">$22.00</span>
-                      </div>
-                    </div>
-                    <div className="rc-post-item">
-                      <div className="rc-post-thumb">
-                        <Link href="/course-details">
-                          <img
-                            src="/assets/img/blog/blog_standard04.jpg"
-                            alt="img"
-                          />
-                        </Link>
-                      </div>
-                      <div className="rc-post-content">
-                        <h4 className="title">
-                          <Link href="/course-details">
-                            Make Edition Magnificent
-                          </Link>
-                        </h4>
-                        <span className="price">
-                          <del>$29.00</del> $18.00
-                        </span>
-                      </div>
-                    </div>
-                    <div className="rc-post-item">
-                      <div className="rc-post-thumb">
-                        <Link href="/course-details">
-                          <img
-                            src="/assets/img/blog/blog_standard03.jpg"
-                            alt="img"
-                          />
-                        </Link>
-                      </div>
-                      <div className="rc-post-content">
-                        <h4 className="title">
-                          <Link href="/course-details">
-                            The Potentially Accessibility
-                          </Link>
-                        </h4>
-                        <span className="price">$11.00</span>
-                      </div>
-                    </div>
-                    <div className="rc-post-item">
-                      <div className="rc-post-thumb">
-                        <Link href="/course-details">
-                          <img
-                            src="/assets/img/blog/blog_standard02.jpg"
-                            alt="img"
-                          />
-                        </Link>
-                      </div>
-                      <div className="rc-post-content">
-                        <h4 className="title">
-                          <Link href="/course-details">
-                            Create quick is wire frames
-                          </Link>
-                        </h4>
-                        <span className="price">$11.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </aside>
               </div>
             </div>
           </div>

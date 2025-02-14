@@ -1,18 +1,26 @@
 import CounterUp from "@/components/elements/CounterUp";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
+import staffData from "@/data/staff_data.json";
+import StaffCard from "@/components/common/StaffCard";
+import { committeeMembers } from "@/data/committee_members.json";
+
 export default function AboutUs() {
+  const mentors = staffData.staffMembers.slice(0, 4);
+  const committeeSlice = committeeMembers.slice(0, 4);
+
   return (
     <>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="About Us">
         <div>
+          {/* history */}
           <section className="about-area-two">
             <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-xl-5 col-lg-6">
+              <div className="row justify-content-center align-items-center">
+                <div className="col-xl-8 col-lg-6">
                   <div className="about__title-wrap">
                     <div className="section__title">
-                      <span className="sub-title">Who we are</span>
+                      <span className="sub-title">History</span>
                       <h2 className="title tg-svg">
                         Empowering Young{" "}
                         <span className="position-relative">
@@ -26,55 +34,45 @@ export default function AboutUs() {
                         Through Quality Education
                       </h2>
                     </div>
-                    <p className="fw-medium">
-                      We are committed to providing comprehensive education that
-                      nurtures intellectual growth, character development, and
-                      lifelong learning skills.
+                    <p>
+                      Founded in 1960 by visionary educators, our institution
+                      stands as a testament to educational excellence and
+                      innovation. From our humble beginnings as a small
+                      establishment, we have grown into one of the region's most
+                      respected educational institutions, housed in a
+                      prestigious heritage building that combines historical
+                      charm with modern facilities.
                     </p>
                     <p>
-                      Our school offers a balanced curriculum that combines
-                      academic excellence with co-curricular activities,
-                      fostering all-round development of our students in a
-                      supportive and innovative learning environment.
+                      Today, our school functions across five integrated
+                      sections - Pre-Primary, Infant, Junior, Middle, and Senior
+                      Schools - serving a diverse student body of over 1,900
+                      students. Our curriculum seamlessly blends academic rigor
+                      with character development, offering both national and
+                      international curricula including ICSE, ISC, IGCSE, and
+                      IBDP programs.
                     </p>
-                    <div className="tg-button-wrap">
-                      <Link href="/co-curricular-activities" className="btn tg-svg">
-                        <span className="text">Explore Activities</span>{" "}
-                        <span
-                          className="svg-icon"
-                          id="about-btn"
-                          data-svg-icon="assets/img/icons/btn-arrow.svg"
-                        />
-                      </Link>
-                    </div>
+                    <p>
+                      What sets us apart is our commitment to holistic
+                      development. Beyond academics, we foster leadership
+                      through various clubs and activities, from Model United
+                      Nations to Astronomy Club, while our international
+                      programs provide global exposure through partnerships with
+                      institutions worldwide. Our state-of-the-art facilities,
+                      including digitized classrooms and specialized learning
+                      centers, ensure students have access to the best resources
+                      for their educational journey.
+                    </p>
                   </div>
                 </div>
-                <div className="col-xl-7 col-lg-6 col-md-11">
+                {/* right images */}
+                <div className="col-xl-4 col-lg-6 col-md-11">
                   <div className="about__images-wrap">
                     <div className="column">
-                      <img src="/assets/img/others/about_img03.jpg" alt="img" />
-                    </div>
-                    <div className="column">
-                      <img src="/assets/img/others/about_img04.jpg" alt="img" />
-                      <img src="/assets/img/others/about_img05.jpg" alt="img" />
-                    </div>
-                    <div className="about__shapes">
                       <img
-                        src="/assets/img/objects/about_shape01.png"
+                        src="/assets/img/staff/staff-10.jpg"
                         alt="img"
-                        className="about-shape-01"
-                        data-aos="fade-down-left"
-                      />
-                      <img
-                        src="/assets/img/objects/about_shape02.png"
-                        alt="img"
-                        className="about-shape-02"
-                        data-aos="fade-up-right"
-                      />
-                      <img
-                        src="/assets/img/objects/about_shape03.png"
-                        alt="img"
-                        className="about-shape-03 rotateme"
+                        style={{ height: "450px", width: "100%" }}
                       />
                     </div>
                   </div>
@@ -82,6 +80,143 @@ export default function AboutUs() {
               </div>
             </div>
           </section>
+          {/* staff */}
+          <section className="mentors-area position-relative section-pt-120 section-pb-90">
+            <div className="container">
+              <div className="section__title-wrap mb-55">
+                <div className="row align-items-center gap-4 gap-md-0">
+                  <div className="col-md-8">
+                    <div className="section__title text-center text-md-start">
+                      {/* <span className="sub-title">
+                        Our Qualified People Matter
+                      </span> */}
+                      <h2 className="title tg-svg">
+                        Top{" "}
+                        <span className="position-relative">
+                          <span
+                            className="svg-icon"
+                            id="svg-8"
+                            data-svg-icon="assets/img/icons/title_shape.svg"
+                          />
+                          Class
+                        </span>{" "}
+                        Mentors
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="tg-button-wrap justify-content-center justify-content-md-end">
+                      <Link
+                        href="/staff-details"
+                        className="btn btn-border tg-svg"
+                      >
+                        <span className="text">All Staff</span>
+                        <span
+                          className="svg-icon"
+                          id="mentors-btn"
+                          data-svg-icon="assets/img/icons/btn-arrow.svg"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* staff */}
+              <div className="row justify-content-center">
+                {mentors.map((staff) => (
+                  <div key={staff.id} className="col-xl-3 col-lg-4 col-sm-6">
+                    <StaffCard staff={staff} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mentors__shapes">
+              <img src="/assets/img/objects/mentors_shape01.png" alt="shape" />
+              <img src="/assets/img/objects/mentors_shape02.png" alt="shape" />
+            </div>
+          </section>
+          {/* school committee */}
+          <section className="cta-area-two position-relative">
+            <div
+              className="cta__bg"
+              data-background="/assets/img/bg/cta_bg.jpg"
+            />
+            <div className="container">
+              <div className="section__title-wrap mb-55">
+                <div className="row align-items-center gap-4 gap-md-0">
+                  <div className="col-md-8">
+                    <div className="section__title text-center text-md-start">
+                      <h2 className="title tg-svg" style={{ color: "#fff" }}>
+                        School{" "}
+                        <span className="position-relative">
+                          <span
+                            className="svg-icon"
+                            id="svg-8"
+                            data-svg-icon="assets/img/icons/title_shape.svg"
+                          />
+                          Committee
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="tg-button-wrap justify-content-center justify-content-md-end">
+                      <Link
+                        href="/school-comittee"
+                        className="btn btn-border tg-svg"
+                      >
+                        <span className="text">All Members</span>
+                        <span
+                          className="svg-icon"
+                          id="mentors-btn"
+                          data-svg-icon="assets/img/icons/btn-arrow.svg"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row justify-content-center">
+                {committeeSlice.map((member) => (
+                  <div key={member.id} className="col-xl-3 col-lg-4 col-sm-6">
+                    <div className="mentors__item">
+                      <div className="mentors__img">
+                        <Link href={`/school-comittee/${member.id}`}>
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            style={{
+                              width: "200px",
+                              height: "200px",
+                              objectFit: "cover",
+                              background: member.bgColor,
+                            }}
+                          />
+                        </Link>
+                      </div>
+                      <div className="mentors__content">
+                        <div className="mentors__content-top">
+                          <h4 className="name">
+                            <Link href={`/school-comittee/${member.id}`}>
+                              {member.name}
+                            </Link>
+                          </h4>
+                          <span className="designation">{member.role}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mentors__shapes">
+              <img src="/assets/img/objects/mentors_shape01.png" alt="shape" />
+              <img src="/assets/img/objects/mentors_shape02.png" alt="shape" />
+            </div>
+          </section>
+
           <section
             className="fact-area fact-bg"
             data-background="/assets/img/bg/fact_bg.jpg"
@@ -162,270 +297,7 @@ export default function AboutUs() {
               </div>
             </div>
           </section>
-          <section className="mentors-area position-relative section-pt-120 section-pb-90">
-            <div className="container">
-              <div className="section__title-wrap mb-55">
-                <div className="row align-items-center gap-4 gap-md-0">
-                  <div className="col-md-8">
-                    <div className="section__title text-center text-md-start">
-                      <span className="sub-title">
-                        Our Qualified People Matter
-                      </span>
-                      <h2 className="title tg-svg">
-                        Top{" "}
-                        <span className="position-relative">
-                          <span
-                            className="svg-icon"
-                            id="svg-8"
-                            data-svg-icon="assets/img/icons/title_shape.svg"
-                          />
-                          Class
-                        </span>{" "}
-                        Mentors
-                      </h2>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="tg-button-wrap justify-content-center justify-content-md-end">
-                      <Link
-                        href="/instructor"
-                        className="btn btn-border tg-svg"
-                      >
-                        <span className="text">All Instructors</span>{" "}
-                        <span
-                          className="svg-icon"
-                          id="mentors-btn"
-                          data-svg-icon="assets/img/icons/btn-arrow.svg"
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row justify-content-center">
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                  <div className="mentors__item">
-                    <div className="mentors__img">
-                      <Link href="/instructor-details">
-                        <img
-                          src="/assets/img/mentors/mentors01.png"
-                          alt="mentor"
-                        />
-                      </Link>
-                      <div className="mentors__social">
-                        <span className="share">
-                          <i className="flaticon-share" />
-                        </span>
-                        <ul className="social-list list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mentors__content">
-                      <div className="mentors__content-top">
-                        <h4 className="name">
-                          <Link href="/instructor-details">Robert Smith</Link>
-                        </h4>
-                        <span className="designation">Graphic Design</span>
-                      </div>
-                      <div className="mentors__content-bottom">
-                        <ul className="list-wrap">
-                          <li className="students">
-                            <i className="flaticon-user-1" />
-                            1,135 Students
-                          </li>
-                          <li className="rating">
-                            <i className="fas fa-star" />
-                            <span className="rating-count">(5.0)</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                  <div className="mentors__item">
-                    <div className="mentors__img">
-                      <Link href="/instructor-details">
-                        <img
-                          src="/assets/img/mentors/mentors02.png"
-                          alt="mentor"
-                        />
-                      </Link>
-                      <div className="mentors__social">
-                        <span className="share">
-                          <i className="flaticon-share" />
-                        </span>
-                        <ul className="social-list list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mentors__content">
-                      <div className="mentors__content-top">
-                        <h4 className="name">
-                          <Link href="/instructor-details">Olivia Mia</Link>
-                        </h4>
-                        <span className="designation">Web Design</span>
-                      </div>
-                      <div className="mentors__content-bottom">
-                        <ul className="list-wrap">
-                          <li className="students">
-                            <i className="flaticon-user-1" />
-                            1,135 Students
-                          </li>
-                          <li className="rating">
-                            <i className="fas fa-star" />
-                            <span className="rating-count">(4.9)</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                  <div className="mentors__item">
-                    <div className="mentors__img">
-                      <Link href="/instructor-details">
-                        <img
-                          src="/assets/img/mentors/mentors03.png"
-                          alt="mentor"
-                        />
-                      </Link>
-                      <div className="mentors__social">
-                        <span className="share">
-                          <i className="flaticon-share" />
-                        </span>
-                        <ul className="social-list list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mentors__content">
-                      <div className="mentors__content-top">
-                        <h4 className="name">
-                          <Link href="/instructor-details">William Hope</Link>
-                        </h4>
-                        <span className="designation">Digital Marketing</span>
-                      </div>
-                      <div className="mentors__content-bottom">
-                        <ul className="list-wrap">
-                          <li className="students">
-                            <i className="flaticon-user-1" />
-                            3,235 Students
-                          </li>
-                          <li className="rating">
-                            <i className="fas fa-star" />
-                            <span className="rating-count">(4.7)</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                  <div className="mentors__item">
-                    <div className="mentors__img">
-                      <Link href="/instructor-details">
-                        <img
-                          src="/assets/img/mentors/mentors04.png"
-                          alt="mentor"
-                        />
-                      </Link>
-                      <div className="mentors__social">
-                        <span className="share">
-                          <i className="flaticon-share" />
-                        </span>
-                        <ul className="social-list list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mentors__content">
-                      <div className="mentors__content-top">
-                        <h4 className="name">
-                          <Link href="/instructor-details">Sophia Ava</Link>
-                        </h4>
-                        <span className="designation">Web Development</span>
-                      </div>
-                      <div className="mentors__content-bottom">
-                        <ul className="list-wrap">
-                          <li className="students">
-                            <i className="flaticon-user-1" />
-                            2,235 Students
-                          </li>
-                          <li className="rating">
-                            <i className="fas fa-star" />
-                            <span className="rating-count">(4.2)</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mentors__shapes">
-              <img src="/assets/img/objects/mentors_shape01.png" alt="shape" />
-              <img src="/assets/img/objects/mentors_shape02.png" alt="shape" />
-            </div>
-          </section>
+
           <section className="cta-area-two position-relative">
             <div
               className="cta__bg"

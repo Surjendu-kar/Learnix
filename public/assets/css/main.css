@@ -3552,7 +3552,7 @@ textarea {
 }
 
 .about-area-two {
-  padding: 140px 0;
+  padding: 100px 0 50px;
 }
 
 @media (max-width: 991.98px) {
@@ -3639,7 +3639,7 @@ textarea {
 @media (max-width: 767.98px) {
   .about__images-wrap .column {
     gap: 20px;
-    max-width: calc(50% - 10px);
+    /* max-width: calc(50% - 10px); */
   }
 }
 
