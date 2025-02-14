@@ -15,7 +15,11 @@ export const CoCurricularCard = ({ item }) => {
         <Link
           href="#"
           className="courses__item-tag"
-          style={{ backgroundColor: "#E8F9EF", color: "#04BC53" }}
+          style={{
+            backgroundColor: "#E8F9EF",
+            color: "#04BC53",
+            width: "fit-content",
+          }}
         >
           {item.category}
         </Link>

@@ -1,5 +1,5 @@
 import ActivityPageTemplate from "@/components/common/ActivityPageTemplate";
-import schoolActivities from "../data/school_activities.json";
+import { schoolActivities } from "../data/school_activities.json";
 
 const SchoolActivityCard = ({ item }) => {
   return (
@@ -10,7 +10,11 @@ const SchoolActivityCard = ({ item }) => {
       <div className="courses__item-two-content">
         <div
           className="courses__item-tag"
-          style={{ backgroundColor: "#E8F9EF", color: "#04BC53" }}
+          style={{
+            backgroundColor: "#E8F9EF",
+            color: "#04BC53",
+            width: "fit-content",
+          }}
         >
           {item.category}
         </div>
@@ -48,13 +52,9 @@ const SchoolActivityCard = ({ item }) => {
 };
 
 function SchoolActivities() {
-  const activitiesData = Array.isArray(schoolActivities)
-    ? schoolActivities
-    : schoolActivities.schoolActivities || [];
-
   return (
     <ActivityPageTemplate
-      data={activitiesData}
+      data={schoolActivities}
       title="School Activities"
       CardComponent={SchoolActivityCard}
       breadcrumbTitle="School Activities"

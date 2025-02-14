@@ -1,5 +1,5 @@
 import ActivityPageTemplate from "@/components/common/ActivityPageTemplate";
-import olympiads from "../data/olympiads.json";
+import { olympiads } from "../data/olympiads.json";
 
 const OlympiadCard = ({ item }) => {
   return (
@@ -10,7 +10,11 @@ const OlympiadCard = ({ item }) => {
       <div className="courses__item-two-content">
         <div
           className="courses__item-tag"
-          style={{ backgroundColor: "#E8F9EF", color: "#04BC53" }}
+          style={{
+            backgroundColor: "#E8F9EF",
+            color: "#04BC53",
+            width: "fit-content",
+          }}
         >
           {item.mode}
         </div>
@@ -48,13 +52,9 @@ const OlympiadCard = ({ item }) => {
 };
 
 function Olympiads() {
-  const olympiadsData = Array.isArray(olympiads)
-    ? olympiads
-    : olympiads.olympiads || [];
-
   return (
     <ActivityPageTemplate
-      data={olympiadsData}
+      data={olympiads}
       title="Olympiads"
       CardComponent={OlympiadCard}
       breadcrumbTitle="Olympiads"

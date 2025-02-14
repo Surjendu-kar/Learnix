@@ -1,0 +1,51 @@
+{
+  "notices": [
+    {
+      "id": 1,
+      "title": "Annual Sports Day Registration",
+      "date": "2025-01-17",
+      "description": "Registration for Annual Sports Day is now open. Students interested in participating should register with their respective sports coordinators.",
+      "venue": "Sports Ground",
+      "coordinator": "Mr. Mahesh Singh",
+      "participants": "All grades",
+      "link": "/sports"
+    },
+    {
+      "id": 2,
+      "title": "Parent-Teacher Meeting Schedule",
+      "date": "Last Saturday of January 2025",
+      "description": "Monthly parent-teacher meeting to discuss student progress and address concerns. Time slots will be allocated through the school portal.",
+      "venue": "Respective Classrooms",
+      "coordinator": "Class Teachers",
+      "participants": "All grades"
+    },
+    {
+      "id": 3,
+      "title": "Science Exhibition Project Submission",
+      "date": "2025-01-16",
+      "description": "All students participating in the Science Exhibition must submit their project proposals to their respective science teachers.",
+      "venue": "School Ground",
+      "coordinator": "Dr. Ravi Kumar",
+      "participants": "Grades 6-12",
+      "link": "/school-activities"
+    },
+    {
+      "id": 4,
+      "title": "New Co-Curricular Activities Registration",
+      "date": "2025-01-15",
+      "description": "Registration for various co-curricular activities including Robotics Club, Drama Club, and Science Club is now open. Limited seats available.",
+      "coordinator": "Activity Coordinators",
+      "participants": "As per activity requirements",
+      "link": "/co-curricular-activities"
+    },
+    {
+      "id": 5,
+      "title": "Career Counseling Session",
+      "date": "2025-01-20",
+      "description": "Special career counseling session for senior students. Various college representatives and career experts will be present.",
+      "venue": "School Hall",
+      "coordinator": "Mr. Arun Kumar",
+      "participants": "Grades 9-12"
+    }
+  ]
+}

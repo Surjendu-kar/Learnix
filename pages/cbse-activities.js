@@ -1,5 +1,5 @@
 import ActivityPageTemplate from "@/components/common/ActivityPageTemplate";
-import cbseActivities from "../data/cbse_activities.json";
+import { cbseActivities } from "../data/cbse_activities.json";
 
 const CBSEActivityCard = ({ item }) => {
   return (
@@ -10,7 +10,11 @@ const CBSEActivityCard = ({ item }) => {
       <div className="courses__item-two-content">
         <div
           className="courses__item-tag"
-          style={{ backgroundColor: "#E8F9EF", color: "#04BC53" }}
+          style={{
+            backgroundColor: "#E8F9EF",
+            color: "#04BC53",
+            width: "fit-content",
+          }}
         >
           {item.category}
         </div>
@@ -49,13 +53,9 @@ const CBSEActivityCard = ({ item }) => {
 };
 
 function CBSEActivities() {
-  const activitiesData = Array.isArray(cbseActivities)
-    ? cbseActivities
-    : cbseActivities.cbseActivities || [];
-
   return (
     <ActivityPageTemplate
-      data={activitiesData}
+      data={cbseActivities}
       title="CBSE Activities"
       CardComponent={CBSEActivityCard}
       breadcrumbTitle="CBSE Activities"

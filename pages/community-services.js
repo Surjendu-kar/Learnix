@@ -1,5 +1,5 @@
 import ActivityPageTemplate from "@/components/common/ActivityPageTemplate";
-import communityServices from "../data/community_services.json";
+import { communityServices } from "../data/community_services.json";
 
 const CommunityServiceCard = ({ item }) => {
   return (
@@ -10,7 +10,11 @@ const CommunityServiceCard = ({ item }) => {
       <div className="courses__item-two-content">
         <div
           className="courses__item-tag"
-          style={{ backgroundColor: "#E8F9EF", color: "#04BC53" }}
+          style={{
+            backgroundColor: "#E8F9EF",
+            color: "#04BC53",
+            width: "fit-content",
+          }}
         >
           {item.type}
         </div>
@@ -48,13 +52,9 @@ const CommunityServiceCard = ({ item }) => {
 };
 
 function CommunityServices() {
-  const servicesData = Array.isArray(communityServices)
-    ? communityServices
-    : communityServices.communityServices || [];
-
   return (
     <ActivityPageTemplate
-      data={servicesData}
+      data={communityServices}
       title="Community Services"
       CardComponent={CommunityServiceCard}
       breadcrumbTitle="Community Services"

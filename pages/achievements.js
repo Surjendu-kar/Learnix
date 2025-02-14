@@ -1,5 +1,5 @@
 import ActivityPageTemplate from "@/components/common/ActivityPageTemplate";
-import achievements from "../data/achievements.json";
+import { achievements } from "../data/achievements.json";
 
 const AchievementCard = ({ item }) => {
   return (
@@ -10,7 +10,11 @@ const AchievementCard = ({ item }) => {
       <div className="courses__item-two-content">
         <div
           className="courses__item-tag"
-          style={{ backgroundColor: "#E8F9EF", color: "#04BC53" }}
+          style={{
+            backgroundColor: "#E8F9EF",
+            color: "#04BC53",
+            width: "fit-content",
+          }}
         >
           {item.category}
         </div>
@@ -48,13 +52,9 @@ const AchievementCard = ({ item }) => {
 };
 
 function Achievements() {
-  const achievementsData = Array.isArray(achievements)
-    ? achievements
-    : achievements.achievements || [];
-
   return (
     <ActivityPageTemplate
-      data={achievementsData}
+      data={achievements}
       title="Achievements"
       CardComponent={AchievementCard}
       breadcrumbTitle="Student Achievements"

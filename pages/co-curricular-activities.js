@@ -224,17 +224,13 @@
 // export default CoCurricularActivities;
 
 import ActivityPageTemplate from "@/components/common/ActivityPageTemplate";
-import co_curricular_activities from "../data/co_curricular_activities.json";
+import { coCurricularActivities } from "../data/co_curricular_activities.json";
 import { CoCurricularCard } from "@/components/school-cards/CoCurricularCard";
 
 function CoCurricularActivities() {
-  const activitiesData = Array.isArray(co_curricular_activities)
-    ? co_curricular_activities
-    : co_curricular_activities.coCurricularActivities || [];
-
   return (
     <ActivityPageTemplate
-      data={activitiesData}
+      data={coCurricularActivities}
       title="Curricula Activities"
       CardComponent={CoCurricularCard}
       breadcrumbTitle="School Activities"

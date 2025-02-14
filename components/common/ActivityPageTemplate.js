@@ -60,7 +60,7 @@ const ActivityPageTemplate = ({
   };
 
   const content = filteredContent.map((item) => (
-    <div className="col" key={item.id}>
+    <div className="col g-4" key={item.id}>
       <CardComponent item={item} />
     </div>
   ));
