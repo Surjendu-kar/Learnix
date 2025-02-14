@@ -6,6 +6,7 @@ import { committeeMembers } from "@/data/committee_members.json";
 import blogData from "@/data/blog.json";
 import React from "react";
 import BlogCard1 from "@/components/blog/BlogCard1";
+import Testimonial1 from "@/components/sections/Testimonial1";
 
 export default function AboutUs() {
   const mentors = staffData.staffMembers.slice(0, 4);
@@ -82,6 +83,10 @@ export default function AboutUs() {
               </div>
             </div>
           </section>
+
+          {/* Vision & Mission */}
+          <Testimonial1 />
+
           {/* staff */}
           <section className="mentors-area position-relative section-pt-120 section-pb-90">
             <div className="container">
