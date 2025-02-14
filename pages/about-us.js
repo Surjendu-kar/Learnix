@@ -1,9 +1,11 @@
-import CounterUp from "@/components/elements/CounterUp";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import staffData from "@/data/staff_data.json";
 import StaffCard from "@/components/common/StaffCard";
 import { committeeMembers } from "@/data/committee_members.json";
+import blogData from "@/data/blog.json";
+import React from "react";
+import BlogCard1 from "@/components/blog/BlogCard1";
 
 export default function AboutUs() {
   const mentors = staffData.staffMembers.slice(0, 4);
@@ -180,7 +182,15 @@ export default function AboutUs() {
 
               <div className="row justify-content-center">
                 {committeeSlice.map((member) => (
-                  <div key={member.id} className="col-xl-3 col-lg-4 col-sm-6">
+                  <div
+                    key={member.id}
+                    className="col-xl-3 col-lg-4 col-sm-6"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      marginBottom: "20px",
+                    }}
+                  >
                     <div className="mentors__item">
                       <div className="mentors__img">
                         <Link href={`/school-comittee/${member.id}`}>
@@ -211,6 +221,64 @@ export default function AboutUs() {
                 ))}
               </div>
             </div>
+            <div className="mentors__shapes">
+              <img src="/assets/img/objects/mentors_shape01.png" alt="shape" />
+              <img src="/assets/img/objects/mentors_shape02.png" alt="shape" />
+            </div>
+          </section>
+
+          {/* Achievements Section */}
+          <section className="blog-area section-pt-120 section-pb-90">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-xl-6 col-lg-7 col-md-8">
+                  <div className="section__title text-center mb-40">
+                    <span className="sub-title">Our Achievements</span>
+                    <h2 className="title tg-svg">
+                      Student{" "}
+                      <span className="position-relative">
+                        <span
+                          className="svg-icon"
+                          id="achievements-title"
+                          data-svg-icon="assets/img/icons/title_shape.svg"
+                        />
+                        Achievements
+                      </span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row justify-content-center">
+                {blogData
+                  .filter((post) => post.category === "Achievement")
+                  .slice(0, 3) // Show only first 3 achievements
+                  .map((item) => (
+                    <React.Fragment key={item.id}>
+                      <BlogCard1 item={item} />
+                    </React.Fragment>
+                  ))}
+              </div>
+
+              <div className="row justify-content-center mt-4">
+                <div className="col-md-12">
+                  <div className="tg-button-wrap justify-content-center">
+                    <Link
+                      href="/achievements"
+                      className="btn btn-border tg-svg"
+                    >
+                      <span className="text">View All Achievements</span>
+                      <span
+                        className="svg-icon"
+                        id="achievements-btn"
+                        data-svg-icon="assets/img/icons/btn-arrow.svg"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="mentors__shapes">
               <img src="/assets/img/objects/mentors_shape01.png" alt="shape" />
               <img src="/assets/img/objects/mentors_shape02.png" alt="shape" />
