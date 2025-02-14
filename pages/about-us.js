@@ -155,14 +155,14 @@ export default function AboutUs() {
                   <div className="col-md-8">
                     <div className="section__title text-center text-md-start">
                       <h2 className="title tg-svg" style={{ color: "#fff" }}>
-                        School{" "}
+                      Committee{" "}
                         <span className="position-relative">
                           <span
                             className="svg-icon"
                             id="svg-8"
                             data-svg-icon="assets/img/icons/title_shape.svg"
                           />
-                          Committee
+                          Members
                         </span>
                       </h2>
                     </div>
