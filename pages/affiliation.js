@@ -1,9 +1,25 @@
 import Layout from "@/components/layout/Layout";
 import React from "react";
-import affiliationJson from "@/data/affiliation.json";
+import { affiliationData } from "@/data/affiliation.json";
+import TableComponent from "@/components/school-cards/TableComponent";
 
 function Affiliation() {
-  const affiliationData = affiliationJson.affiliationData;
+  const headerItems = [
+    { key: "type", label: "Type" },
+    { key: "number", label: "Number" },
+    { key: "category", label: "Category" },
+    { key: "date", label: "Date" },
+  ];
+
+  const expandedFields = [
+    { key: "type", label: "Type" },
+    { key: "number", label: "Number" },
+    { key: "category", label: "Category" },
+    { key: "date", label: "Date" },
+    { key: "validity", label: "Validity" },
+    { key: "status", label: "Status", type: "badge" },
+    { key: "location", label: "Location" },
+  ];
 
   return (
     <>
@@ -11,50 +27,11 @@ function Affiliation() {
         <section className="about-area-two">
           <div className="container">
             {/* Affiliation Table */}
-            <div className="row">
-              <div className="col-12">
-                <div className="table-responsive" style={{ overflowX: "auto" }}>
-                  <table className="table">
-                    <thead className="bg-light">
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Number</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Validity</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Location</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {affiliationData.map((item) => (
-                        <tr key={item.id}>
-                          <td>{item.id}</td>
-                          <td>{item.type}</td>
-                          <td>{item.number}</td>
-                          <td>{item.category}</td>
-                          <td>{item.date}</td>
-                          <td>{item.validity}</td>
-                          <td>
-                            <span
-                              className={`badge ${
-                                item.status === "Active"
-                                  ? "bg-success"
-                                  : "bg-danger"
-                              }`}
-                            >
-                              {item.status}
-                            </span>
-                          </td>
-                          <td>{item.location}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+            <TableComponent
+              data={affiliationData}
+              headerItems={headerItems}
+              expandedFields={expandedFields}
+            />
 
             {/* Infrastructure Section */}
             <div className="row mt-80">
