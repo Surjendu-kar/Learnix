@@ -217,7 +217,7 @@ export default function AboutUs() {
             </div>
           </section>
 
-          <section
+          {/* <section
             className="fact-area fact-bg"
             data-background="/assets/img/bg/fact_bg.jpg"
           >
@@ -296,9 +296,9 @@ export default function AboutUs() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
-          <section className="cta-area-two position-relative">
+          {/* <section className="cta-area-two position-relative">
             <div
               className="cta__bg"
               data-background="/assets/img/bg/cta_bg.jpg"
@@ -475,7 +475,7 @@ export default function AboutUs() {
                 alt="shape"
               />
             </div>
-          </section>
+          </section> */}
         </div>
       </Layout>
     </>

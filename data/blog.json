@@ -9,66 +9,42 @@
   },
   {
     "id": 2,
-    "title": "New Research Center for Advanced Technologies Inaugurated",
+    "title": "Campus Expansion Project Announced",
     "img": "blog-2.jpg",
-    "category": "Infrastructure",
+    "category": "News",
     "author": "Admin",
     "date": "8 Feb 2025"
   },
   {
     "id": 3,
     "title": "Students Shine at National Science Fair Competition",
-    "img": "blog-5.jpg",
-    "category": "Placement",
+    "img": "blog-7.jpg",
+    "category": "Achievement",
     "author": "Admin",
     "date": "5 Feb 2025"
   },
   {
     "id": 4,
-    "title": "When aeunkno printer took galley of scrambled",
-    "img": "blog_thumb04.jpg",
-    "category": "Tech",
+    "title": "New Academic Partnership with Leading Industry Players",
+    "img": "blog-9.jpg",
+    "category": "News",
     "author": "Admin",
-    "date": "25 April 2023"
+    "date": "1 Feb 2025"
   },
   {
     "id": 5,
-    "title": "Full Stack GraphQL With Next.js And Vercel",
-    "img": "blog_thumb05.jpg",
-    "category": "EDUCATION",
+    "title": "Research Team Receives International Recognition",
+    "img": "blog-8.jpg",
+    "category": "Achievement",
     "author": "Admin",
-    "date": "25 April 2023"
+    "date": "28 Jan 2025"
   },
   {
     "id": 6,
-    "title": "What Leonardo Teach us About Web Design",
-    "img": "blog_thumb06.jpg",
-    "category": "COURSE",
+    "title": "Annual Technology Conference Announcement",
+    "img": "blog-10.png",
+    "category": "News",
     "author": "Admin",
-    "date": "25 April 2023"
-  },
-  {
-    "id": 7,
-    "title": "When aeunkno printer took galley of scrambled",
-    "img": "blog_thumb07.jpg",
-    "category": "SKILL DEVELOPMENT",
-    "author": "Admin",
-    "date": "25 April 2023"
-  },
-  {
-    "id": 8,
-    "title": "Full Stack GraphQL With Next.js And Vercel",
-    "img": "blog_thumb08.jpg",
-    "category": "Tech",
-    "author": "Admin",
-    "date": "25 April 2023"
-  },
-  {
-    "id": 9,
-    "title": "What Leonardo Teach us About Web Design",
-    "img": "blog_thumb09.jpg",
-    "category": "Tech",
-    "author": "Admin",
-    "date": "25 April 2023"
+    "date": "25 Jan 2025"
   }
 ]

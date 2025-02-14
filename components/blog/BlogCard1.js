@@ -11,9 +11,30 @@ export default function BlogCard1({ item }) {
           className="blog__post-item shine__animate-item"
           style={{ height: "100%" }}
         >
-          <div className="blog__post-thumb">
-            <Link href={`/blog/${item.id}`} className="shine__animate-link">
-              <img src={`/assets/img/blog/${item.img}`} alt="img" />
+          <div
+            className="blog__post-thumb"
+            style={{
+              height: "240px", 
+              overflow: "hidden", 
+            }}
+          >
+            <Link
+              href={`/blog/${item.id}`}
+              className="shine__animate-link"
+              style={{
+                display: "block",
+                height: "100%",
+              }}
+            >
+              <img
+                src={`/assets/img/blog/${item.img}`}
+                alt="img"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover", 
+                }}
+              />
             </Link>
           </div>
           <div className="blog__post-content">
