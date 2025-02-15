@@ -233,7 +233,7 @@ function CoCurricularActivities() {
       data={coCurricularActivities}
       title="Curricula Activities"
       CardComponent={CoCurricularCard}
-      breadcrumbTitle="School Activities"
+      breadcrumbTitle="Curricula Activities"
     />
   );
 }

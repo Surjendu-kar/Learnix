@@ -57,7 +57,7 @@ function Achievements() {
       data={achievements}
       title="Achievements"
       CardComponent={AchievementCard}
-      breadcrumbTitle="Student Achievements"
+      breadcrumbTitle="Achievements"
     />
   );
 }

@@ -57,7 +57,7 @@ function Sports() {
       data={sports}
       title="Sports"
       CardComponent={SportCard}
-      breadcrumbTitle="Sports Activities"
+      breadcrumbTitle="Sports"
     />
   );
 }
