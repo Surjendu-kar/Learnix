@@ -42,10 +42,18 @@ function TcSample() {
       // Simulate API call with setTimeout
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setSubmitSuccess(true);
-      // Here you would typically send the file to your server
-      // const formData = new FormData();
-      // formData.append('file', selectedFile);
-      // await fetch('/api/upload', { method: 'POST', body: formData });
+
+      // Reset all states after successful submission
+      setTimeout(() => {
+        setSelectedFile(null);
+        setPdfUrl("");
+        setSubmitSuccess(false);
+        // Reset the file input
+        const fileInput = document.querySelector('input[type="file"]');
+        if (fileInput) {
+          fileInput.value = "";
+        }
+      }, 1000); // Wait 2 seconds after success message before resetting
     } catch (error) {
       alert("Error submitting file. Please try again.");
     } finally {
