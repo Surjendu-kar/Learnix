@@ -34,7 +34,7 @@ function Affiliation() {
             />
 
             {/* Infrastructure Section */}
-            <div className="row mt-80">
+            {/* <div className="row mt-80">
               <div className="col-12">
                 <div className="section__title mb-30">
                   <h2 className="title">Infrastructure and Facilities</h2>
@@ -83,7 +83,7 @@ function Affiliation() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </Layout>
