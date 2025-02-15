@@ -26,28 +26,29 @@ export default function Banner1() {
                   data-aos="fade-right"
                   data-aos-delay={200}
                 >
-                  NAAC 'A' Grade Accredited
+                  CBSE Affiliated School
                 </span>
                 <h3
                   className="title tg-svg"
                   data-aos="fade-right"
                   data-aos-delay={400}
                 >
-                  Shaping{" "}
+                  Nurturing{" "}
                   <span className="position-relative">
                     <span
                       className="svg-icon"
                       id="svg-2"
                       data-svg-icon="assets/img/icons/title_shape.svg"
                     />
-                    Future
+                    Excellence
                   </span>{" "}
-                  Through Quality Education
+                  Through Holistic Education
                 </h3>
                 <p data-aos="fade-right" data-aos-delay={600}>
-                  Discover excellence in education with our comprehensive
-                  programs, state-of-the-art facilities, and dedicated faculty
-                  committed to nurturing tomorrow's leaders.
+                  Experience quality education where academic excellence meets
+                  character development. Our dedicated teachers and modern
+                  facilities create an inspiring environment for your child's
+                  growth.
                 </p>
                 <div
                   className="banner__btn-wrap"
@@ -104,8 +105,8 @@ export default function Banner1() {
                       <i className="flaticon-group" />
                     </div>
                     <div className="info">
-                      <span>Alumni Network</span>
-                      <h4 className="count">25K+</h4>
+                      <span>Student Strength</span>
+                      <h4 className="count">1000+</h4>
                     </div>
                   </div>
                   <div className="banner__fact-item">
@@ -113,8 +114,8 @@ export default function Banner1() {
                       <i className="flaticon-graduation-cap" />
                     </div>
                     <div className="info">
-                      <span>Programs Offered</span>
-                      <h4 className="count">50+</h4>
+                      <span>Years of Excellence</span>
+                      <h4 className="count">25+</h4>
                     </div>
                   </div>
                 </div>

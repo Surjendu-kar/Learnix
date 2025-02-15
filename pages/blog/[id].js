@@ -16,7 +16,11 @@ export default function BlogDetails() {
   return (
     <>
       {blogPost && (
-        <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Blog Details">
+        <Layout
+          headerStyle={3}
+          footerStyle={1}
+          breadcrumbTitle={blogPost.category}
+        >
           <section className="blog-standard-area section-py-120">
             <div className="container">
               <div className="row">

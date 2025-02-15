@@ -1,0 +1,104 @@
+{
+  "listOfBooksData": [
+    {
+      "id": 1,
+      "name": "Primary Class (1-2)",
+      "courses": "Age 6-7 years",
+      "link": "/books/primary-junior",
+      "icon": "flaticon-book",
+      "mainSubjects": [
+        {
+          "subject": "English",
+          "books": ["Marigold Reader", "My English Workbook"]
+        },
+        {
+          "subject": "Mathematics",
+          "books": ["Math Magic", "Mathematics Practice Book"]
+        },
+        {
+          "subject": "EVS",
+          "books": ["Looking Around", "EVS Workbook"]
+        },
+        {
+          "subject": "Hindi",
+          "books": ["Rimjhim", "Hindi Abhyas Pustika"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Primary Class (3-5)",
+      "courses": "Age 8-10 years",
+      "link": "/books/primary-senior",
+      "icon": "flaticon-book-stack",
+      "mainSubjects": [
+        {
+          "subject": "English",
+          "books": ["Marigold Advanced", "Grammar & Composition"]
+        },
+        {
+          "subject": "Mathematics",
+          "books": ["Mathematics Textbook", "Math Practice Guide"]
+        },
+        {
+          "subject": "Science",
+          "books": ["Environmental Studies", "Science Activity Book"]
+        },
+        {
+          "subject": "Social Studies",
+          "books": ["Our Past", "Social Science Workbook"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Middle School (6-8)",
+      "courses": "Age 11-13 years",
+      "link": "/books/middle-school",
+      "icon": "flaticon-graduation-cap",
+      "mainSubjects": [
+        {
+          "subject": "English",
+          "books": ["Honeysuckle", "English Literature & Grammar"]
+        },
+        {
+          "subject": "Mathematics",
+          "books": ["Mathematics (NCERT)", "RD Sharma Mathematics"]
+        },
+        {
+          "subject": "Science",
+          "books": ["Science (NCERT)", "Science Lab Manual"]
+        },
+        {
+          "subject": "Social Science",
+          "books": ["History - Our Pasts", "Geography - Our Environment"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Secondary (9-10)",
+      "courses": "Age 14-15 years",
+      "link": "/books/secondary",
+      "icon": "flaticon-education",
+      "mainSubjects": [
+        {
+          "subject": "English",
+          "books": ["Beehive", "Moments", "Words and Expressions"]
+        },
+        {
+          "subject": "Mathematics",
+          "books": ["Mathematics (NCERT)", "RS Aggarwal Mathematics"]
+        },
+        {
+          "subject": "Science",
+          "books": ["Science (NCERT)", "Science Lab Manual", "Science Exemplar"]
+        },
+        {
+          "subject": "Social Science",
+          "books": ["Contemporary India", "Democratic Politics", "Economics"]
+        }
+      ]
+    }
+  ]
+}

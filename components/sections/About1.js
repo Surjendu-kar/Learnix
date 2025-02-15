@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function About1() {
+  const pathname = usePathname();
+  const isOnPrincipalMessage = pathname === "/principal's-message";
+
   return (
     <>
       <section className="about-area tg-motion-effects section-py-120">
@@ -10,7 +14,7 @@ export default function About1() {
               <div className="about__images">
                 <img
                   className="small-img tg-motion-effects3"
-                  src="/assets/img/others/about-2.jpg"
+                  src="/assets/img/others/about-1.jpg"
                   alt="img"
                   style={{
                     height: "300px",
@@ -20,7 +24,7 @@ export default function About1() {
                 />
                 <img
                   className="big-img"
-                  src="/assets/img/others/about-1.jpg"
+                  src="/assets/img/others/about-2.jpg"
                   alt="img"
                   style={{
                     height: "550px",
@@ -43,7 +47,7 @@ export default function About1() {
                     />
                   </svg>
                   <h4 className="year">25 +</h4>
-                  <p>Years of Experiences</p>
+                  <p>Years of Excellence</p>
                 </div>
                 <img
                   src="/assets/img/others/about_dots.svg"
@@ -88,10 +92,11 @@ export default function About1() {
                   </h2>
                 </div>
                 <p className="desc">
-                  Welcome to our institution where we strive for academic
-                  excellence and holistic development. Our commitment is to
-                  provide quality education that prepares students for global
-                  challenges while maintaining strong ethical values.
+                  Welcome to our school where we foster academic excellence and
+                  character development. Our dedicated team of educators creates
+                  a nurturing environment that inspires students to learn, grow,
+                  and achieve their full potential while upholding strong moral
+                  values.
                 </p>
                 <ul className="about__info-list list-wrap">
                   <li className="about__info-list-item">
@@ -99,7 +104,7 @@ export default function About1() {
                       <i className="flaticon-graduation-cap" />
                     </div>
                     <p className="content">
-                      50+ <br /> Programs
+                      100% <br /> Board Results
                     </p>
                   </li>
                   <li className="about__info-list-item">
@@ -107,7 +112,7 @@ export default function About1() {
                       <i className="flaticon-support" />
                     </div>
                     <p className="content">
-                      200+ <br /> Faculty Members
+                      50+ <br /> Expert Teachers
                     </p>
                   </li>
                   <li className="about__info-list-item">
@@ -115,7 +120,7 @@ export default function About1() {
                       <i className="flaticon-group" />
                     </div>
                     <p className="content">
-                      25K+ <br /> Alumni Network
+                      1000+ <br /> Happy Students
                     </p>
                   </li>
                   <li className="about__info-list-item">
@@ -123,20 +128,22 @@ export default function About1() {
                       <i className="flaticon-file" />
                     </div>
                     <p className="content">
-                      100+ <br /> Activities
+                      20+ <br /> Activities
                     </p>
                   </li>
                 </ul>
-                <div className="tg-button-wrap">
-                  <Link href="/about-us" className="btn tg-svg">
-                    <span className="text">Read Full Message</span>{" "}
-                    <span
-                      className="svg-icon"
-                      id="about-btn"
-                      data-svg-icon="assets/img/icons/btn-arrow.svg"
-                    />
-                  </Link>
-                </div>
+                {!isOnPrincipalMessage && (
+                  <div className="tg-button-wrap">
+                    <Link href="/principal's-message" className="btn tg-svg">
+                      <span className="text">Read Full Message</span>{" "}
+                      <span
+                        className="svg-icon"
+                        id="about-btn"
+                        data-svg-icon="assets/img/icons/btn-arrow.svg"
+                      />
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>
