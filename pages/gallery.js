@@ -1,8 +1,15 @@
 import Layout from "@/components/layout/Layout";
 import { useEffect, useState } from "react";
 
+const ImageLoader = () => (
+  <div className="animate-pulse">
+    <div className="bg-gray-200 rounded-lg h-64 w-full"></div>
+  </div>
+);
+
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [loadingStates, setLoadingStates] = useState({});
 
   const galleryImages = [
     {
@@ -62,7 +69,6 @@ export default function Gallery() {
     setSelectedImage(galleryImages[nextIndex]);
   };
 
-  // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!selectedImage) return;
@@ -89,7 +95,6 @@ export default function Gallery() {
               </div>
             </div>
 
-            {/* Gallery Grid */}
             <div className="row">
               {galleryImages.map((image) => (
                 <div key={image.id} className="col-lg-4 col-md-6 col-sm-12">
@@ -98,11 +103,20 @@ export default function Gallery() {
                     style={{ cursor: "pointer" }}
                     onClick={() => handleImageClick(image)}
                   >
+                    {loadingStates[image.id] && <ImageLoader />}
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="img-fluid w-100"
+                      className={`img-fluid w-100 ${
+                        loadingStates[image.id] ? "opacity-0" : "opacity-100"
+                      }`}
                       style={{ height: "300px", objectFit: "cover" }}
+                      onLoad={() => {
+                        setLoadingStates((prev) => ({
+                          ...prev,
+                          [image.id]: false,
+                        }));
+                      }}
                     />
                     <div className="gallery-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                       <span className="gallery-icon">
@@ -114,7 +128,6 @@ export default function Gallery() {
               ))}
             </div>
 
-            {/* Lightbox */}
             {selectedImage && (
               <div
                 className="lightbox-overlay position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
@@ -124,7 +137,6 @@ export default function Gallery() {
                 }}
               >
                 <div className="position-relative" style={{ maxWidth: "90vw" }}>
-                  {/* Close button */}
                   <button
                     onClick={handleLightboxClose}
                     className="btn-close btn-close-white position-absolute top-0 end-0"
@@ -132,7 +144,6 @@ export default function Gallery() {
                     aria-label="Close"
                   ></button>
 
-                  {/* Navigation arrows */}
                   <div
                     onClick={handlePrevImage}
                     className="nav-arrow position-fixed top-50 translate-middle-y"
@@ -149,7 +160,6 @@ export default function Gallery() {
                     ›
                   </div>
 
-                  {/* Main image */}
                   <img
                     src={selectedImage.src}
                     alt={selectedImage.alt}
@@ -161,7 +171,6 @@ export default function Gallery() {
             )}
           </div>
 
-          {/* CSS for hover effects */}
           <style jsx>{`
             .gallery-item {
               border-radius: 8px;
