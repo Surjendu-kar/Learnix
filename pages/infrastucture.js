@@ -80,6 +80,11 @@ const SmallCard = ({ image, category, title }) => {
 export default function Infrastructure() {
   const bigCards = [
     {
+      image: "/assets/img/infrastucture/groung-img.jpeg",
+      category: "SCHOOL OVERVIEW",
+      title: "Our Beautiful School Infrastructure Overview",
+    },
+    {
       image: "/assets/img/infrastucture/img-1.jpg",
       category: "ACADEMIC",
       title: "Well-maintained classrooms with proper seating and blackboards",
@@ -142,8 +147,14 @@ export default function Infrastructure() {
           </div>
 
           <div className="row justify-content-center">
-            <div className="col-lg-6">
+            <div className="col-lg-12">
               <BigCard {...bigCards[0]} />
+            </div>
+          </div>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <BigCard {...bigCards[1]} />
             </div>
             <div className="col-lg-6">
               <SmallCard {...smallCards[0]} />
@@ -153,7 +164,7 @@ export default function Infrastructure() {
 
           <div className="row justify-content-center mt-4">
             <div className="col-lg-6">
-              <BigCard {...bigCards[1]} />
+              <BigCard {...bigCards[2]} />
             </div>
             <div className="col-lg-6">
               <SmallCard {...smallCards[2]} />
