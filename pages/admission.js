@@ -133,7 +133,7 @@ export default function Admission() {
 
   return (
     <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Admission">
-      <div className="container section-py-80">
+      <div className="container section-py-80" style={{ margin: "80px auto" }}>
         <div className="row">
           <div className="col-xl-12">
             <div className="contact-form-wrap">
