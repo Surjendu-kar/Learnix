@@ -23,20 +23,13 @@ const SportCard = ({ item }) => {
           <li>
             <i className="flaticon-user-1" /> {item.coach}
           </li>
-          <div
-            style={{
-              display: "flex",
-              flex: 1,
-              justifyContent: "space-between",
-            }}
-          >
-            <li>
-              <i className="flaticon-timer" /> {item.timing}
-            </li>
-            <li>
-              <i className="flaticon-user-1" /> Max: {item.maxPlayers}
-            </li>
-          </div>
+
+          <li>
+            <i className="flaticon-timer" /> {item.timing}
+          </li>
+          <li>
+            <i className="flaticon-user-1" /> Max: {item.maxPlayers}
+          </li>
         </ul>
         <div className="courses__item-bottom">
           <div className="course__schedule">

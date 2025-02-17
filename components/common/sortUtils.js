@@ -1,5 +1,6 @@
 export const getSortedData = (data, sort, currentPath) => {
   const isCoCurricular = currentPath === "/co-curricular-activities";
+  const isCBSEResult = currentPath === "/cbse-result";
 
   const getDurationInMinutes = (duration) => {
     const [time, unit] = duration.split(" ");
@@ -8,7 +9,14 @@ export const getSortedData = (data, sort, currentPath) => {
 
   return data.sort((a, b) => {
     const getName = (item) => {
-      return item.activityName || item.eventName || item.name || item.title || "";
+      return (
+        item.activityName ||
+        item.eventName ||
+        item.studentName ||
+        item.name ||
+        item.title ||
+        ""
+      );
     };
 
     switch (sort) {
@@ -19,9 +27,21 @@ export const getSortedData = (data, sort, currentPath) => {
       case "latest":
       case "":
       default:
+        if (isCBSEResult) {
+          // For CBSE results, sort by percentage
+          return b.percentage - a.percentage;
+        }
         return new Date(b.date) - new Date(a.date);
       case "oldest":
+        if (isCBSEResult) {
+          // For CBSE results, sort by percentage in ascending order
+          return a.percentage - b.percentage;
+        }
         return new Date(a.date) - new Date(b.date);
+      case "percentage_asc":
+        return isCBSEResult ? a.percentage - b.percentage : 0;
+      case "percentage_desc":
+        return isCBSEResult ? b.percentage - a.percentage : 0;
       // Co-curricular specific sorting
       case "duration_asc":
         return isCoCurricular

@@ -10,6 +10,7 @@ export const CommonSort = () => {
   const currentPath = router.pathname;
 
   const isCoCurricular = currentPath === "/co-curricular-activities";
+  const isCBSEResult = currentPath === "/cbse-result";
 
   const basicSortOptions = [
     { id: 1, name: "Sort by (default)", value: "", isChecked: sort === "" },
@@ -54,12 +55,33 @@ export const CommonSort = () => {
     },
   ];
 
-  const sortOptions = isCoCurricular
-    ? [...basicSortOptions, ...coCurricularOptions]
-    : basicSortOptions;
+  const cbseResultOptions = [
+    {
+      id: 12,
+      name: "Percentage (Lowest First)",
+      value: "percentage_asc",
+      isChecked: sort === "percentage_asc",
+    },
+    {
+      id: 13,
+      name: "Percentage (Highest First)",
+      value: "percentage_desc",
+      isChecked: sort === "percentage_desc",
+    },
+  ];
+
+  const getSortOptions = () => {
+    if (isCoCurricular) {
+      return [...basicSortOptions, ...coCurricularOptions];
+    }
+    if (isCBSEResult) {
+      return [...basicSortOptions, ...cbseResultOptions];
+    }
+    return basicSortOptions;
+  };
 
   const sortHandler = (e, id) => {
-    if (sortOptions.find((option) => option.id === id)?.isChecked) {
+    if (getSortOptions().find((option) => option.id === id)?.isChecked) {
       dispatch(addSort(""));
     } else {
       dispatch(addSort(e.target.value));
@@ -68,7 +90,7 @@ export const CommonSort = () => {
 
   return (
     <ul className="list-wrap">
-      {sortOptions.map((item) => (
+      {getSortOptions().map((item) => (
         <li key={item.id}>
           <div className="form-check">
             <label className="form-check-label">

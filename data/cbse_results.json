@@ -1,0 +1,130 @@
+{
+  "cbseResults": [
+    {
+      "id": 1,
+      "studentName": "Rahul Sharma",
+      "rollNumber": "CBSE2025001",
+      "class": "12",
+      "stream": "Science Stream",
+      "examType": "Term 1",
+      "category": "Regular",
+      "subjects": {
+        "Physics": 95,
+        "Chemistry": 92,
+        "Mathematics": 98,
+        "English Core": 88,
+        "Computer Science": 96
+      },
+      "totalMarks": 469,
+      "percentage": 93.8,
+      "grade": "A+",
+      "rank": 1,
+      "academicYear": "2024-2025"
+    },
+    {
+      "id": 2,
+      "studentName": "Priya Patel",
+      "rollNumber": "CBSE2025002",
+      "class": "12",
+      "stream": "Commerce",
+      "examType": "Term 1",
+      "category": "Regular",
+      "subjects": {
+        "Accountancy": 94,
+        "Business Studies": 90,
+        "Economics": 92,
+        "English Core": 89,
+        "Mathematics": 88
+      },
+      "totalMarks": 453,
+      "percentage": 90.6,
+      "grade": "A+",
+      "rank": 2,
+      "academicYear": "2024-2025"
+    },
+    {
+      "id": 3,
+      "studentName": "Amit Kumar",
+      "rollNumber": "CBSE2025003",
+      "class": "12",
+      "stream": "Humanities",
+      "examType": "Term 1",
+      "category": "Regular",
+      "subjects": {
+        "History": 88,
+        "Political Science": 92,
+        "Geography": 85,
+        "English Core": 90,
+        "Economics": 94
+      },
+      "totalMarks": 449,
+      "percentage": 89.8,
+      "grade": "A",
+      "rank": 3,
+      "academicYear": "2024-2025"
+    },
+    {
+      "id": 4,
+      "studentName": "Sneha Gupta",
+      "rollNumber": "CBSE2025004",
+      "class": "10",
+      "stream": "Secondary",
+      "examType": "Term 1",
+      "category": "Regular",
+      "subjects": {
+        "English": 92,
+        "Mathematics": 95,
+        "Science": 88,
+        "Social Science": 90,
+        "Hindi": 85
+      },
+      "totalMarks": 450,
+      "percentage": 90.0,
+      "grade": "A+",
+      "rank": 1,
+      "academicYear": "2024-2025"
+    },
+    {
+      "id": 5,
+      "studentName": "Aarav Singh",
+      "rollNumber": "CBSE2025005",
+      "class": "8",
+      "stream": "Middle School",
+      "examType": "Term 1",
+      "category": "Regular",
+      "subjects": {
+        "English": 88,
+        "Mathematics": 92,
+        "Science": 95,
+        "Social Science": 87,
+        "Hindi": 89
+      },
+      "totalMarks": 451,
+      "percentage": 90.2,
+      "grade": "A+",
+      "rank": 1,
+      "academicYear": "2024-2025"
+    },
+    {
+      "id": 6,
+      "studentName": "Ananya Patel",
+      "rollNumber": "CBSE2025006",
+      "class": "5",
+      "stream": "Primary Class",
+      "examType": "Term 1",
+      "category": "Regular",
+      "subjects": {
+        "English": 95,
+        "Mathematics": 90,
+        "Science": 92,
+        "Social Studies": 88,
+        "Hindi": 85
+      },
+      "totalMarks": 450,
+      "percentage": 90.0,
+      "grade": "A+",
+      "rank": 1,
+      "academicYear": "2024-2025"
+    }
+  ]
+}

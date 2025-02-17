@@ -23,20 +23,12 @@ const AchievementCard = ({ item }) => {
           <li>
             <i className="flaticon-user-1" /> {item.student}
           </li>
-          <div
-            style={{
-              display: "flex",
-              flex: 1,
-              justifyContent: "space-between",
-            }}
-          >
-            <li>
-              <i className="flaticon-timer" /> Grade {item.grade}
-            </li>
-            <li>
-              <i className="flaticon-user-1" /> {item.level}
-            </li>
-          </div>
+          <li>
+            <i className="flaticon-timer" /> Grade {item.grade}
+          </li>
+          <li>
+            <i className="flaticon-user-1" /> {item.level}
+          </li>
         </ul>
         <div className="courses__item-bottom">
           <div className="course__schedule">

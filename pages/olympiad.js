@@ -23,20 +23,13 @@ const OlympiadCard = ({ item }) => {
           <li>
             <i className="flaticon-user-1" /> {item.coordinator}
           </li>
-          <div
-            style={{
-              display: "flex",
-              flex: 1,
-              justifyContent: "space-between",
-            }}
-          >
-            <li>
-              <i className="flaticon-timer" /> {item.duration}
-            </li>
-            <li>
-              <i className="flaticon-user-1" /> ₹{item.registrationFee}
-            </li>
-          </div>
+
+          <li>
+            <i className="flaticon-timer" /> {item.duration}
+          </li>
+          <li>
+            <i className="flaticon-user-1" /> ₹{item.registrationFee}
+          </li>
         </ul>
         <div className="courses__item-bottom">
           <div className="course__schedule">
