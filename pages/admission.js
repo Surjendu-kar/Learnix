@@ -129,11 +129,25 @@ export default function Admission() {
   const languageOptions = [
     { value: "Bengali", label: "Bengali" },
     { value: "Hindi", label: "Hindi" },
+    { value: "English", label: "English" },
+    { value: "Urdu", label: "Urdu" },
+    { value: "Punjabi", label: "Punjabi" },
+    { value: "Telugu", label: "Telugu" },
+    { value: "Tamil", label: "Tamil" },
+    { value: "Marathi", label: "Marathi" },
+    { value: "Gujarati", label: "Gujarati" },
+    { value: "Kannada", label: "Kannada" },
+    { value: "Malayalam", label: "Malayalam" },
+    { value: "Odia", label: "Odia" },
+    { value: "Assamese", label: "Assamese" },
+    { value: "Maithili", label: "Maithili" },
+    { value: "Sanskrit", label: "Sanskrit" },
+    { value: "other", label: "Other" },
   ];
 
   return (
     <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Admission">
-      <div className="container section-py-80" style={{ margin: "80px auto" }}>
+      <div className="container section-py-80" style={{}}>
         <div className="row">
           <div className="col-xl-12">
             <div className="contact-form-wrap">
@@ -184,7 +198,7 @@ export default function Admission() {
                   </div>
 
                   {/* Address Details */}
-                  <div className="col-md-12 mt-4">
+                  <div className="col-md-12 mt-3">
                     <h5 className="sub-title mb-3">Address Details</h5>
                     <FormTextArea
                       name="currentAddress"
@@ -205,7 +219,7 @@ export default function Admission() {
                   </div>
 
                   {/* Contact Details */}
-                  <div className="col-md-12 mt-4">
+                  <div className="col-md-12 mt-3">
                     <h5 className="sub-title mb-3">Contact Details</h5>
                   </div>
                   <div className="col-md-6">
@@ -229,7 +243,7 @@ export default function Admission() {
                   </div>
 
                   {/* Parents' Information */}
-                  <div className="col-md-12 mt-4">
+                  <div className="col-md-12 mt-3">
                     <h5 className="sub-title mb-3">Parents' Information</h5>
                   </div>
                   <div className="col-md-6">
@@ -252,7 +266,7 @@ export default function Admission() {
                   </div>
 
                   {/* Additional Details */}
-                  <div className="col-md-12 mt-4">
+                  <div className="col-md-12 mt-3">
                     <h5 className="sub-title mb-3">Additional Details</h5>
                   </div>
                   <div className="col-md-4">
@@ -286,12 +300,12 @@ export default function Admission() {
                   </div>
 
                   {/* Academic Details */}
-                  <div className="col-md-12 mt-4">
+                  <div className="col-md-12 mt-3">
                     <h5 className="sub-title mb-3">Academic Details</h5>
                   </div>
                   <div className="col-md-12">
                     <div className="row">
-                      <div className="col-md-6">
+                      <div className="col-md-3">
                         <FormSelect
                           name="section"
                           placeholder="Select Section *"
@@ -302,7 +316,7 @@ export default function Admission() {
                         />
                       </div>
                       {selectedSection && (
-                        <div className="col-md-6">
+                        <div className="col-md-3">
                           <FormSelect
                             name="admissionClass"
                             placeholder="Select Class *"
@@ -317,7 +331,7 @@ export default function Admission() {
                   </div>
 
                   {showAadhaar && (
-                    <div className="col-md-12 mt-3">
+                    <div className="col-md-12">
                       <FormInput
                         type="text"
                         name="aadhaarNo"
@@ -331,13 +345,22 @@ export default function Admission() {
                       </small>
                     </div>
                   )}
-
                   <div className="col-md-6">
-                    <FormInput
-                      type="text"
+                    <FormSelect
                       name="motherTongue"
-                      placeholder="Mother Tongue"
+                      placeholder="Mother Tongue *"
+                      options={languageOptions}
                       value={formData.motherTongue}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <FormSelect
+                      name="secondLanguage"
+                      placeholder="Choice of Second Language *"
+                      options={languageOptions}
+                      required
+                      value={formData.secondLanguage}
                       onChange={handleInputChange}
                     />
                   </div>
@@ -350,19 +373,9 @@ export default function Admission() {
                       onChange={handleInputChange}
                     />
                   </div>
-                  <div className="col-md-12">
-                    <FormSelect
-                      name="secondLanguage"
-                      placeholder="Choice of Second Language *"
-                      options={languageOptions}
-                      required
-                      value={formData.secondLanguage}
-                      onChange={handleInputChange}
-                    />
-                  </div>
 
                   {/* Additional Questions */}
-                  <div className="col-md-12 mt-4">
+                  <div className="col-md-12 mt-3">
                     <h5 className="sub-title mb-3">Additional Information</h5>
                   </div>
                   <div className="col-md-12">
@@ -434,11 +447,11 @@ export default function Admission() {
                   )}
 
                   {/* Declaration */}
-                  <div className="col-md-12 mt-4">
+                  <div className="col-md-12 mt-3">
                     <div className="form-grp">
                       <p
                         className="declaration-text"
-                        style={{ fontStyle: "italic", marginBottom: "20px" }}
+                        style={{ fontStyle: "italic", marginBottom: "10px" }}
                       >
                         I declare that the above informations are true to the
                         best of my knowledge. I understand that fees once paid
@@ -458,7 +471,7 @@ export default function Admission() {
 
                 <button
                   type="submit"
-                  className="btn mt-4"
+                  className="btn mt-3"
                   disabled={!formData.agreed}
                 >
                   Submit Application
@@ -468,6 +481,38 @@ export default function Admission() {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        :global(.form-grp select) {
+          width: 100%;
+          border: 1px solid #dae0e7;
+          border-radius: 3px;
+          display: block;
+          background: var(--tg-common-color-white);
+          font-weight: 400;
+          font-size: 15px;
+          color: var(--tg-body-color);
+          padding: 11px 20px;
+          height: 50px;
+          transition: 0.3s;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8.825L1.175 4 2.238 2.938 6 6.7l3.763-3.763L10.825 4z'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right 15px center;
+          background-size: 12px;
+        }
+
+        :global(.form-grp select:focus) {
+          border-color: var(--tg-theme-primary);
+          outline: none;
+        }
+
+        :global(.form-grp select option) {
+          padding: 10px;
+        }
+      `}</style>
     </Layout>
   );
 }

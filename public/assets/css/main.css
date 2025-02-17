@@ -10478,6 +10478,7 @@ blockquote p {
   border: 1px solid #dae0e7;
   border-radius: 8px;
   padding: 30px 45px 40px;
+  margin: 60px auto;
 }
 
 @media (max-width: 1199.98px) {
@@ -10489,7 +10490,7 @@ blockquote p {
 @media (max-width: 991.98px) {
   .contact-form-wrap {
     padding: 30px 40px 40px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
   }
 }
 
@@ -10538,7 +10539,7 @@ blockquote p {
 }
 
 .contact-form-wrap .form-grp {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .contact-form-wrap .form-grp input,
