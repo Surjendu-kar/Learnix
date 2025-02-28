@@ -12,7 +12,7 @@
       ]
     },
     {
-      "target": "eduvalt",
+      "target": "learnix",
       "public": "out",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [

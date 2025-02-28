@@ -5,8 +5,8 @@
   "targets": {
     "school-management-dce3c": {
       "hosting": {
-        "eduvalt": [
-          "eduvalt-iqnaut"
+        "learnix": [
+          "learnix-iqnaut"
         ]
       }
     }
