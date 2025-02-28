@@ -5,7 +5,7 @@ const PageHead = ({ headTitle }) => {
         <>
             <Head>
                 <title>
-                    {headTitle ? headTitle : "Iqnaut - School Template"}
+                    {headTitle ? headTitle : "Learnix - School Template"}
                 </title>
             </Head>
         </>
