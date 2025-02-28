@@ -84,14 +84,14 @@ const SmallCard = ({ image, category, title, description }) => {
 export default function SchoolAtGlance() {
   const bigCards = [
     {
-      image: "/assets/img/infrastucture/img-1.jpg",
+      image: "/assets/img/infrastucture/img-7.jpeg",
       category: "ACADEMICS",
       title: "Exceptional Academic Programs",
       description:
         "Offering comprehensive education with focus on student development and learning excellence",
     },
     {
-      image: "/assets/img/infrastucture/img-2.jpeg",
+      image: "/assets/img/infrastucture/img-8.jpg",
       category: "ACHIEVEMENTS",
       title: "Student Achievements",
       description:
@@ -101,13 +101,13 @@ export default function SchoolAtGlance() {
 
   const smallCards = [
     {
-      image: "/assets/img/infrastucture/img-3.jpeg",
+      image: "/assets/img/infrastucture/img-10.jpg",
       category: "FACULTY",
       title: "Dedicated Teaching Staff",
       description: "Experienced educators committed to student success",
     },
     {
-      image: "/assets/img/infrastucture/img-4.jpg",
+      image: "/assets/img/infrastucture/img-9.jpg",
       category: "ACTIVITIES",
       title: "Co-Curricular Activities",
       description: "Wide range of activities for holistic development",

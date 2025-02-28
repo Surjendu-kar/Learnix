@@ -43,24 +43,28 @@ export const FormSelect = ({
   required,
   value,
   onChange,
-}) => (
-  <div className="form-grp">
-    <select
-      name={name}
-      required={required}
-      value={value}
-      onChange={onChange}
-      className="custom-select"
-    >
-      <option value="">{placeholder}</option>
-      {options.map((option) => (
-        <option key={option.value} value={option.value}>
-          {option.label}
-        </option>
-      ))}
-    </select>
-  </div>
-);
+}) => {
+  const fieldName = placeholder.replace(' *', '');
+  
+  return (
+    <div className="form-grp">
+      <select
+        name={name}
+        required={required}
+        value={value}
+        onChange={onChange}
+        className="custom-select"
+      >
+        <option value="" disabled hidden>{`Select ${fieldName}`}</option>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
 
 export const RadioGroup = ({ question, name, onChange, value }) => (
   <div className="form-grp">

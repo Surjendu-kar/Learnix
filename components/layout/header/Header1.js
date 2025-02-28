@@ -71,7 +71,7 @@ export default function Header1({
                   <nav className="tgmenu__nav">
                     <div className="logo">
                       <Link href="/">
-                        <img src="/assets/img/logo/logo.png" alt="Logo" />
+                        <img src="/assets/img/logo/logo-1.png" alt="Logo" />
                       </Link>
                     </div>
 

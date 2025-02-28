@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Pre-Primary",
       "courses": "Nursery to KG",
-      "link": "#-primary",
+      "link": "#",
       "icon": "flaticon-email-marketing"
     },
     {
@@ -32,7 +32,7 @@
       "id": 5,
       "name": "Senior Secondary",
       "courses": "Class 11 & 12",
-      "link": "#-secondary",
+      "link": "#",
       "icon": "flaticon-atom"
     },
     {
