@@ -125,7 +125,8 @@ export default function Footer1() {
               <div className="col-lg-8">
                 <div className="copyright__text">
                   <p>
-                    Copyright © {new Date().getFullYear()} iqnaut. All rights
+                    Copyright © {new Date().getFullYear()}{" "}
+                    <Link href="https://iqnaut.com/">iqnaut</Link>. All rights
                     reserved.
                   </p>
                 </div>
