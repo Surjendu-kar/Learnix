@@ -77,31 +77,8 @@ export default function Header1({
 
                     <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                       <ul className="navigation">
-                        <li
-                          className={`menu-item-has-children ${
-                            isLinkActive("/") ? "active" : ""
-                          }`}
-                        >
-                          <Link href="#">Home</Link>
-                          <ul className="sub-menu">
-                            <li className={isLinkActive("/") ? "active" : ""}>
-                              <Link href="/">Home One</Link>
-                            </li>
-                            <li
-                              className={
-                                isLinkActive("/index-2") ? "active" : ""
-                              }
-                            >
-                              <Link href="/index-2">Home Two</Link>
-                            </li>
-                            <li
-                              className={
-                                isLinkActive("/index-3") ? "active" : ""
-                              }
-                            >
-                              <Link href="/index-3">Home Three</Link>
-                            </li>
-                          </ul>
+                        <li className={` ${isLinkActive("/") ? "active" : ""}`}>
+                          <Link href="/">Home</Link>
                         </li>
 
                         {/* About */}
